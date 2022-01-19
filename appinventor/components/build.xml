@@ -175,6 +175,27 @@
     <!-- Add extension libraries here -->
     <!-- Example: <copy toFile="${public.deps.dir}/my-dependency.jar" file="${lib.dir}/my-dependency/my-dependency-1.0.0.jar" /> -->
     <!-- Remember to include my-dependency.jar in the @UsesLibraries annotation in the extension -->
+
+    <copy toFile="${public.deps.dir}/textRecognition.aar" file="${lib.dir}/MlKit/play-services-mlkit-text-recognition-common-16.1.0.aar" />
+    <copy toFile="${public.deps.dir}/textRecognition.jar" file="${lib.dir}/MlKit/play-services-mlkit-text-recognition-common-16.1.0.jar" />
+
+    <copy toFile="${public.deps.dir}/textRecognition17.aar" file="${lib.dir}/MlKit/play-services-mlkit-text-recognition-17.0.1.aar" />
+    <copy toFile="${public.deps.dir}/textRecognition17.jar" file="${lib.dir}/MlKit/play-services-mlkit-text-recognition-17.0.1.jar" />
+
+    <copy toFile="${public.deps.dir}/playservicetask.aar" file="${lib.dir}/MlKit/play-services-tasks-17.2.1.aar" />
+    <copy toFile="${public.deps.dir}/playservicetask.jar" file="${lib.dir}/MlKit/play-services-tasks-17.2.1.jar" />
+
+    <copy toFile="${public.deps.dir}/googleimage.aar" file="${lib.dir}/MlKit/image-1.0.0-beta1.aar" />
+    <copy toFile="${public.deps.dir}/googleimage.jar" file="${lib.dir}/MlKit/image-1.0.0-beta1.jar" />
+
+    <copy toFile="${public.deps.dir}/textRecognitionCommon.aar" file="${lib.dir}/MlKit/common-17.5.0.aar" />
+    <copy toFile="${public.deps.dir}/textRecognitionCommon.jar" file="${lib.dir}/MlKit/common-17.5.0.jar" />
+
+    <copy toFile="${public.deps.dir}/textRecognitionLatin.aar" file="${lib.dir}/MlKit/text-recognition-16.0.0-beta2.aar" />
+    <copy toFile="${public.deps.dir}/textRecognitionLatin.jar" file="${lib.dir}/MlKit/text-recognition-16.0.0-beta2.jar" />
+
+    <copy toFile="${public.deps.dir}/textRecognitionVision.aar" file="${lib.dir}/MlKit/vision-common-16.7.0.aar" />
+    <copy toFile="${public.deps.dir}/textRecognitionVision.jar" file="${lib.dir}/MlKit/vision-common-16.7.0.jar" />
   </target>
 
   <path id="AndroidRuntime.path">
