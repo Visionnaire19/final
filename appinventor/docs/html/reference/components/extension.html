@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="/static/css/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/mit_app_inventor.css">
+    <script type="text/javascript">
+     <!--//--><![CDATA[// ><!--
+
+                                   var gotoappinventor = function() {
+                                       var referrer = document.location.pathname;
+                                       var patt = /.*hour-of-code.*/;
+                                       if (referrer.match(patt)) {
+                                           window.open("http://code.appinventor.mit.edu/", "new");
+                                       } else {
+                                           window.open("http://ai2.appinventor.mit.edu/", "new");
+                                       }
+                                   }
+     //--><!]]>
+    </script>
+    <title>Extension</title></head>
+<body class="mit_app_inventor"><nav class="navbar navbar-expand-xl navbar-light">
+    <a class="navbar-brand" href="http://appinventor.mit.edu/">
+	<img src="/static/images/logo2.png" alt="Logo">
+    </a>
+    <button type="button" class="btn create-btn" style="margin-right: 20px;" onclick="gotoappinventor();">Create Apps!</button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+	<ul class="navbar-nav" style="margin-left: auto;">
+	    <li class="nav-item dropdown">
+		<a class="nav-link" href="http://appinventor.mit.edu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    About
+		</a>
+		<div class="dropdown-menu">
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/about-us">About App Inventor</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/our-team">Our Team</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/master-trainers">Master Trainers</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/app-month-gallery">App of the Month</a>
+                    <a class="dropdown-item"
+                       href="http://appinventor.mit.edu/ai2/ReleaseNotes">Release Notes</a>
+                    <a class="dropdown-item" href="http://appinventor.mit.edu/about/termsofservice" target="_blank">Terms of Service</a>
+		</div>
+	    </li>
+	    <li class="nav-item dropdown">
+		<a class="nav-link" href="http://appinventor.mit.edu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Educators
+		</a>
+		<div class="dropdown-menu">
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/teach" target="_blank">Teach</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/ai2/tutorials">Tutorials</a>
+		</div>
+	    </li>
+	    <li class="nav-item dropdown">
+		<a class="nav-link" href="http://appinventor.mit.edu/news" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    News
+		</a>
+		<div class="dropdown-menu">
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/news">In the news</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/events">Events</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/stories">Stories from the field</a>
+		</div>
+	    </li>
+	    <li class="nav-item dropdown">
+		<a class="nav-link" href="http://appinventor.mit.edu/explore/resources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Resources
+		</a>
+		<div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/get-started">Get Started</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/library">Documentation</a>
+		    <a class="dropdown-item" href="https://community.appinventor.mit.edu"
+                       target="_blank">Forums</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/ai2/tutorials">Tutorials</a>
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/books">App Inventor Books</a>
+		    <a class="dropdown-item"
+                       href="https://github.com/mit-cml/appinventor-sources"
+                       target="_blank">Open Source Information</a>
+	            <a class="dropdown-item" href="http://appinventor.mit.edu/explore/research">Research</a>
+                    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/hour-of-code">Hour of Code</a>
+                    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/resources">Additional Resources</a>
+		</div>
+	    </li>
+            <li class="nav-item dropdown">
+		<a class="nav-link" href="http://appinventor.mit.edu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Blogs
+		</a>
+                <div class="dropdown-menu">
+		    <a class="dropdown-item" href="http://appinventor.mit.edu/explore/blog">App Inventor Blog</a>
+	        </div>
+            </li>
+        </ul>
+        <div style="display: inline-flex;margin-left:auto;margin-right:0">
+	    <a href="https://giving.mit.edu/give/to?fundId=3832320" target="_blank">
+                <button type="button" class="btn donate-btn" style="margin-right: 20px;">Donate</button></a>
+            <script>
+             (function() {
+                 var cx = '005719495929270354943:tlvxrelje-e';
+                 var gcse = document.createElement('script');
+                 gcse.type = 'text/javascript';
+                 gcse.async = true;
+                 gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                            '//www.google.com/cse/cse.js?cx=' + cx;
+                 var s = document.getElementsByTagName('script')[0];
+                 s.parentNode.insertBefore(gcse, s);
+             })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+        </div>
+	<!-- <form class="form-inline" action="/action_page.php">
+	     <div class="form-group has-search">
+	     <span class="fa fa-search form-control-feedback"></span>
+	     <input type="text" class="form-control" placeholder="Search">
+	     </div>
+	     </form> -->
+    </div>
+</nav>
+<div class="default-page">
+            <div class="header">
+	        <h1 class="font-weight-bold text-center offset-xl-2 col-xl-8">Extension</h1>
+            </div>
+            <div class="container-fluid">
+                <article class="documentation">
+<p><a href="index.html">« Back to index</a></p>
+<h1 id="extension">Extension</h1>
+
+<p>Table of Contents:</p>
+
+<ul>
+  <li><a href="#BluetoothLE">BluetoothLE</a></li>
+  <li><a href="#Microbit">Microbit</a></li>
+  <li><a href="#Microbit_Accelerometer">Microbit_Accelerometer</a></li>
+  <li><a href="#Microbit_Button">Microbit_Button</a></li>
+  <li><a href="#Microbit_Device_Information">Microbit_Device_Information</a></li>
+  <li><a href="#Microbit_Dfu_Control">Microbit_Dfu_Control</a></li>
+  <li><a href="#Microbit_Event">Microbit_Event</a></li>
+  <li><a href="#Microbit_Generic_Access">Microbit_Generic_Access</a></li>
+  <li><a href="#Microbit_Generic_Attribute">Microbit_Generic_Attribute</a></li>
+  <li><a href="#Microbit_Io_Pin">Microbit_Io_Pin</a></li>
+  <li><a href="#Microbit_Led">Microbit_Led</a></li>
+  <li><a href="#Microbit_Magnetometer">Microbit_Magnetometer</a></li>
+  <li><a href="#Microbit_Temperature">Microbit_Temperature</a></li>
+  <li><a href="#Microbit_Uart">Microbit_Uart</a></li>
+  <li><a href="#TextRecognizerGood">TextRecognizerGood</a></li>
+</ul>
+
+<h2 id="BluetoothLE">BluetoothLE</h2>
+
+<p>Bluetooth Low Energy, also referred to as Bluetooth LE or simply BLE, is a new communication protocol similar to classic Bluetooth except that it is designed to consume less power while maintaining comparable functionality. For this reason, Bluetooth LE is the preferred choice of communication with IoT devices that have limited power resources. Starting with Android 4.3, Google introduced built-in support for Bluetooth Low Energy. The BluetoothLE extension requires Android 5.0 or higher to avoid known issues with Google’s Bluetooth LE support prior to Android 5.0.</p>
+
+<h3 id="BluetoothLE-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="BluetoothLE.AdvertisementScanPeriod" class="number ro bo"><em>AdvertisementScanPeriod</em></dt>
+  <dd>Returns the value of ScanPeriod.</dd>
+  <dt id="BluetoothLE.AdvertiserAddresses" class="list ro bo"><em>AdvertiserAddresses</em></dt>
+  <dd>Returns a list of the addresses of devices found during Advertisement scanning.</dd>
+  <dt id="BluetoothLE.AdvertiserNames" class="list ro bo"><em>AdvertiserNames</em></dt>
+  <dd>Returns a list of the names of the devices found during Advertisment scanning.</dd>
+  <dt id="BluetoothLE.AutoReconnect" class="boolean"><em>AutoReconnect</em></dt>
+  <dd>If true, the application will attempt to reestablish a lost connection to a device due to link loss (e.g., moving out of range). This will not apply to connections that are disconnected by a call to the <a href="#Disconnect"><code>Disconnect</code></a> method. Such disconnects will need to be reconnected via a call to <a href="#Connect"><code>Connect</code></a> or <a href="#ConnectWithAddress"><code>ConnectWithAddress</code></a>.</dd>
+  <dt id="BluetoothLE.BatteryValue" class="text ro bo"><em>BatteryValue</em></dt>
+  <dd>Returns the battery level.</dd>
+  <dt id="BluetoothLE.ConnectedDeviceName" class="text ro bo"><em>ConnectedDeviceName</em></dt>
+  <dd>The advertised name of the connected device. If no device is connected or Bluetooth low energy
+ is not supported, this will return the empty string.</dd>
+  <dt id="BluetoothLE.ConnectedDeviceRssi" class="number ro bo"><em>ConnectedDeviceRssi</em></dt>
+  <dd>Returns the RSSI (Received Signal Strength Indicator) of connected device.</dd>
+  <dt id="BluetoothLE.ConnectionTimeout" class="number"><em>ConnectionTimeout</em></dt>
+  <dd>The amount of time, in seconds, that the BluetoothLE component will wait for a connection to be established with a device after a call to <a href="#Connect"><code>Connect</code></a> or <a href="#ConnectWithAddress"><code>ConnectWithAddress</code></a>. If a connection is not established in the given amount of time, the attempt will be aborted and the <a href="#ConnectionFailed"><code>ConnectionFailed</code></a> event will be run.</dd>
+  <dt id="BluetoothLE.DeviceCharacteristics" class="list ro bo"><em>DeviceCharacteristics</em></dt>
+  <dd>A list of triples indicating a service UUID, a characteristic UUID, and the characteristic’s
+ name, if known. The format of the list will be
+ ((service1 characteristic1 name1) (service2 characteristic2 name2) …). If no device is
+ connected or Bluetooth low energy is not supported, then an empty list will be returned.</dd>
+  <dt id="BluetoothLE.DeviceList" class="text ro bo"><em>DeviceList</em></dt>
+  <dd>Returns a sorted list of BluetoothLE devices as a String.</dd>
+  <dt id="BluetoothLE.DeviceServices" class="list ro bo"><em>DeviceServices</em></dt>
+  <dd>A list of pairs indicating a service UUID and its name, if known. The format of the list will
+ be ((uuid1 name1) (uuid2 name2) …). If no device is connected or Bluetooth low energy is not
+ supported, then an empty list will be returned.</dd>
+  <dt id="BluetoothLE.IsDeviceAdvertising" class="boolean ro bo"><em>IsDeviceAdvertising</em></dt>
+  <dd>Returns true if the device is currently advertising, false otherwise.</dd>
+  <dt id="BluetoothLE.IsDeviceConnected" class="boolean ro bo"><em>IsDeviceConnected</em></dt>
+  <dd>Returns true if a BluetoothLE device is connected; Otherwise, returns false.</dd>
+  <dt id="BluetoothLE.Scanning" class="boolean ro bo"><em>Scanning</em></dt>
+  <dd>The scanning state of the Bluetooth low energy component.</dd>
+  <dt id="BluetoothLE.TxPower" class="number ro bo"><em>TxPower</em></dt>
+  <dd>Returns the transmission power.</dd>
+</dl>
+
+<h3 id="BluetoothLE-Events">Events</h3>
+
+<dl class="events">
+  <dt id="BluetoothLE.BytesReceived">BytesReceived(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">byteValues</em>)</dt>
+  <dd>The <code>BytesReceived</code> event is run when one or more byte values are received from a
+ connected Bluetooth device. Depending on the <code>sign</code> parameter of the last call to
+ <a href="#ReadBytes"><code>ReadBytes</code></a> or
+ <a href="#RegisterForBytes"><code>RegisterForBytes</code></a> for the given
+ <code>serviceUuid</code> and <code>characteristicUuid</code>, the <code>byteValues</code> list
+ will contain numbers ranging from -128 to 127 (<code>signed = true</code>)
+ or 0 to 255 (<code>signed = false</code>).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;byteValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/listsU.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values read from the device. The range of each value will depend on the &lt;code&gt;sign&lt;/code&gt; flag previously specified in the call to read or register.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.BytesWritten">BytesWritten(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">byteValues</em>)</dt>
+  <dd>The <code>BytesWritten</code> event is run when one or more byte values are written to a
+ connected Bluetooth device. <code>byteValues</code> will be a list of values actually written
+ to the device. This may be different if the original input was too long to fit into a single
+ transmission unit (typically 23 bytes).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;byteValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values written to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.Connected">Connected()</dt>
+  <dd>The <code>Connected</code> event is run after the application successfully connects to a
+ Bluetooth low energy device. This can be the result of a call to
+ <a href="#Connect"><code>Connect</code></a> or
+ <a href="#ConnectWithAddress"><code>ConnectWithAddress</code></a>, or as a result of an
+ automatic reconnect if the <a href="#AutoReconnect"><code>AutoReconnect</code></a> property
+ was true at the time a connection was requested.</dd>
+  <dt id="BluetoothLE.ConnectionFailed">ConnectionFailed(<em class="text">reason</em>)</dt>
+  <dd>The <code>ConnectionFailed</code> event is run when an attempt to connect to a device does not
+ succeed. If a reason is provided by the Bluetooth low energy stack it will be reported via the
+ <code>reason</code> parameter.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;reason&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string" target="_blank"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The reason the connection failed, if known.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.DeviceFound">DeviceFound()</dt>
+  <dd>The <code>DeviceFound</code> event is run when a new Bluetooth low energy device is found.</dd>
+  <dt id="BluetoothLE.Disconnected">Disconnected()</dt>
+  <dd>The <code>Disconnected</code> event is run when a Bluetooth low energy device is disconnected.
+ This can be caused by a call to <a href="#Disconnect"><code>Disconnect</code></a> or
+ <a href="#DisconnectWithAddress"><code>DisconnectWithAddress</code></a>, or after a device
+ is moved away or reset such that a loss of connection occurs.</dd>
+  <dt id="BluetoothLE.FloatsReceived">FloatsReceived(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">floatValues</em>)</dt>
+  <dd>The <code>FloatsReceived</code> event is run when one or more IEEE 754 floating point values are received from a
+ connected Bluetooth device. Depending on the <code>shortFloat</code> parameter of the last call to
+ <a href="#ReadFloats"><code>ReadFloats</code></a> or
+ <a href="#RegisterForFloats"><code>RegisterForFloats</code></a> for the given
+ <code>serviceUuid</code> and <code>characteristicUuid</code>, the <code>floatValues</code> list
+ will contain numbers ranging from -65504.0 to 65504.0 (<code>shortFloat = true</code>)
+ or -3.402823466E38 to 3.402823466E38 (<code>shortFloat = false</code>).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;floatValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values read from the device. The range of each value will depend on the &lt;code&gt;sign&lt;/code&gt; flag previously specified in the call to read or register.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.FloatsWritten">FloatsWritten(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">floatValues</em>)</dt>
+  <dd>The <code>FloatsWritten</code> event is run when one or more IEEE 754 floating point values are written to a
+ connected Bluetooth device. <code>floatValues</code> will be a list of values actually written
+ to the device. This may be different if the original input was too long to fit into a single
+ transmission unit (typically 11 short floats or 5 regular floats).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;floatValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values written to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.IntegersReceived">IntegersReceived(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">intValues</em>)</dt>
+  <dd>The <code>IntegersReceived</code> event is run when one or more 32-bit integer values are received from a
+ connected Bluetooth device. Depending on the <code>sign</code> parameter of the last call to
+ <a href="#ReadIntegers"><code>ReadIntegers</code></a> or
+ <a href="#RegisterForIntegers"><code>RegisterForIntegers</code></a> for the given
+ <code>serviceUuid</code> and <code>characteristicUuid</code>, the <code>intValues</code> list
+ will contain numbers ranging from -2147483648 to 2147483647 (<code>signed = true</code>)
+ or 0 to 4294967296 (<code>signed = false</code>).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;intValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values read from the device. The range of each value will depend on the &lt;code&gt;sign&lt;/code&gt; flag previously specified in the call to read or register.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.IntegersWritten">IntegersWritten(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">intValues</em>)</dt>
+  <dd>The <code>IntegersWritten</code> event is run when one or more 32-bit integers values are written to a
+ connected Bluetooth device. <code>intValues</code> will be a list of values actually written
+ to the device. This may be different if the original input was too long to fit into a single
+ transmission unit (typically 5 integers).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;intValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values written to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.RssiChanged">RssiChanged(<em class="number">rssi</em>)</dt>
+  <dd>The <code>RssiChanged</code> event is run when the Received Signal Strength Indicator (RSSI) of
+ a discovered Bluetooth low energy device changes.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;rssi&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The strength of the received signal, in dBm, from -100 to 0.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ShortsReceived">ShortsReceived(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">shortValues</em>)</dt>
+  <dd>The <code>ShortsReceived</code> event is run when one or more short integer values are received from a
+ connected Bluetooth device. Depending on the <code>sign</code> parameter of the last call to
+ <a href="#ReadShorts"><code>ReadShorts</code></a> or
+ <a href="#RegisterForShorts"><code>RegisterForShorts</code></a> for the given
+ <code>serviceUuid</code> and <code>characteristicUuid</code>, the <code>shortValues</code> list
+ will contain numbers ranging from -32768 to 32767 (<code>signed = true</code>)
+ or 0 to 65535 (<code>signed = false</code>).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;shortValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values read from the device. The range of each value will depend on the &lt;code&gt;sign&lt;/code&gt; flag previously specified in the call to read or register.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ShortsWritten">ShortsWritten(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">shortValues</em>)</dt>
+  <dd>The <code>ShortsWritten</code> event is run when one or more short integers values are written to a
+ connected Bluetooth device. <code>shortValues</code> will be a list of values actually written
+ to the device. This may be different if the original input was too long to fit into a single
+ transmission unit (typically 11 shorts).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;shortValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values written to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.StringsReceived">StringsReceived(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">stringValues</em>)</dt>
+  <dd>The <code>StringsReceived</code> event is run when one or more strings are received from a
+ connected Bluetooth device. Depending on the <code>utf16</code> parameter of the last call to
+ <a href="#ReadStrings"><code>ReadStrings</code></a> or
+ <a href="#RegisterForStrings"><code>RegisterForStrings</code></a> for the given
+ <code>serviceUuid</code> and <code>characteristicUuid</code>, the <code>stringValues</code> list
+ will contain either a UTF-16 little endian decoded (<code>utf16 = true</code>) or UTF-8
+ decoded (<code>utf16 = false</code>) strings. The string length is limited by the maximum
+ transmission unit (MTU) of the Bluetooth device, which is typically 23 bytes.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;stringValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values read from the device. The strings will be decoded as UTF-16 or UTF-8 based on the &lt;code&gt;utf16&lt;/code&gt; flag previously specified in the call to read or register.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.StringsWritten">StringsWritten(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="list">stringValues</em>)</dt>
+  <dd>The <code>StringsWritten</code> event is run when one or more strings are written to a
+ connected Bluetooth device. <code>stringValues</code> will be a list of values actually written
+ to the device. This may be different if the original input was too long to fit into a single
+ transmission unit (typically 22 bytes).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;stringValues&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values written to the device.
+</code></pre></div></div>
+
+<h3 id="BluetoothLE-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="BluetoothLE.AdvertisementData" class="method returns text"><i></i> AdvertisementData(<em class="text">deviceAddress</em>,<em class="text">serviceUuid</em>)</dt>
+  <dd>Returns the advertisement data associated with the specified device address.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;deviceAddress&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The Media Access Control (MAC) address of the target Bluetooth low energy device.
+ * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the advertised service.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.AdvertiserAddress" class="method returns text"><i></i> AdvertiserAddress(<em class="text">deviceName</em>)</dt>
+  <dd>Returns the address of the device with the name specified.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;deviceName&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The advertised name of the target Bluetooth low energy device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.AdvertiserServiceUuids" class="method returns list"><i></i> AdvertiserServiceUuids(<em class="text">deviceAddress</em>)</dt>
+  <dd>Returns the list of services available on the advertising device.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;deviceAddress&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The Media Access Control (MAC) address of the target Bluetooth low energy device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.CharacteristicByIndex" class="method returns text"><i></i> CharacteristicByIndex(<em class="number">index</em>)</dt>
+  <dd>Returns Unique ID of selected characteristic with index. Index specified by list
+ of supported characteristics for a connected device, starting from 1.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;index&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The index of the desired characteristic, which must be between 1 and the length of the characteristic list.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.Connect" class="method"><i></i> Connect(<em class="number">index</em>)</dt>
+  <dd>Use the <code>Connect</code> method to connect to a Bluetooth low energy device at the given
+ index in the device list.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;index&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The index of the target device, which must be between 1 and the length of the list.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ConnectWithAddress" class="method"><i></i> ConnectWithAddress(<em class="text">address</em>)</dt>
+  <dd>Use the <code>ConnectWithAddress</code> method to connect to a specific Bluetooth low energy
+ device if its Media Access Control (MAC) address is known. If none of the devices in the device
+ list matches the given address, the <a href="#ConnectionFailed"><code>ConnectionFailed</code></a>
+ event will be run. Otherwise, if a connection is successful the
+ <a href="#Connected"><code>Connected</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;address&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string" target="_blank"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The MAC address of the target device, of the form "12:34:56:78:90:ab"
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.Disconnect" class="method"><i></i> Disconnect()</dt>
+  <dd>Disconnects from the currently connected BluetoothLE device if a device is connected.</dd>
+  <dt id="BluetoothLE.DisconnectWithAddress" class="method"><i></i> DisconnectWithAddress(<em class="text">address</em>)</dt>
+  <dd>Disconnects from a connected BluetoothLE device with the given address.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;address&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string" target="_blank"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The Media Access Control (MAC) address of the device to disconnect, of the form "12:34:56:78:90:ab"
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.FoundDeviceAddress" class="method returns text"><i></i> FoundDeviceAddress(<em class="number">index</em>)</dt>
+  <dd>Gets the Media Access Control (MAC) address of the found device at the given index in the
+ device list. Index specifies the position in the BluetoothLE device list, starting from 1.</dd>
+</dl>
+
+<p><strong>Parameter</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;index&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The index of the desired device, which must be between 1 and the length of the device list.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.FoundDeviceName" class="method returns text"><i></i> FoundDeviceName(<em class="number">index</em>)</dt>
+  <dd>Gets the name of the found device at the given index in the device list.</dd>
+</dl>
+
+<p><strong>Parameter</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;index&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The index of the desired device, which must be between 1 and the length of the device list.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.FoundDeviceRssi" class="method returns number"><i></i> FoundDeviceRssi(<em class="number">index</em>)</dt>
+  <dd>Gets the Received Signal Strength Indicator (RSSI) of the found device at the given index.
+ The returned value will be between -100 and 0 indicating the strength of the connection.</dd>
+</dl>
+
+<p><strong>Parameter</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;index&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The index of the desired device, which must be between 1 and the length of the device list.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.GetCharacteristicsForService" class="method returns list"><i></i> GetCharacteristicsForService(<em class="text">serviceUuid</em>)</dt>
+  <dd>Returns the list of supported characteristics for the given service. The list will contain
+ (UUID, name) pairs for each characteristic provided by the service UUID.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ReadBytes" class="method"><i></i> ReadBytes(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>)</dt>
+  <dd>Reads one or more 8-bit integer values from a connected BluetoothLE device. Service Unique ID
+ and Characteristic UniqueID are required. The <code>signed</code> parameter indicates whether
+ the bytes should be interpreted as signed values or not when being converted into App Inventor
+ numbers. After the bytes are read, the <a href="#BytesReceived"><code>BytesReceived</code></a>
+ event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the bytes as signed (true) or unsigned (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ReadFloats" class="method"><i></i> ReadFloats(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">shortFloat</em>)</dt>
+  <dd>Reads one or more IEEE 754 floating point numbers from a connected BluetoothLE device. Service Unique ID
+ and Characteristic UniqueID are required. The <code>shortFloat</code> parameter indicates whether
+ the floats are either 16-bit half-precision floating point or 32-bit single precision floating point
+ numbers. After the floats are read, the <a href="#FloatsReceived"><code>FloatsReceived</code></a>
+ event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;shortFloat&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the floats as 16-bit half-precision (true) or 32-bit single-precision (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ReadIntegers" class="method"><i></i> ReadIntegers(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>)</dt>
+  <dd>Reads one or more 32-bit integer values from a connected BluetoothLE device. Service Unique ID
+ and Characteristic UniqueID are required. The <code>signed</code> parameter indicates whether
+ the integers should be interpreted as signed values or not when being converted into App Inventor
+ numbers. After the integers are read, the
+ <a href="#IntegersReceived"><code>IntegersReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the integers as signed (true) or unsigned (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ReadShorts" class="method"><i></i> ReadShorts(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>)</dt>
+  <dd>Reads one or more 16-bit integer values from a connected BluetoothLE device. Service Unique ID
+ and Characteristic UniqueID are required. The <code>signed</code> parameter indicates whether
+ the shorts should be interpreted as signed values or not when being converted into App Inventor
+ numbers. After the shorts are read, the <a href="#ShortsReceived"><code>ShortsReceived</code></a>
+ event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the shorts as signed (true) or unsigned (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ReadStrings" class="method"><i></i> ReadStrings(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">utf16</em>)</dt>
+  <dd>Reads one or more null-terminated strings from a connected BluetoothLE device. Service Unique ID
+ and Characteristic Unique ID are required. The <code>utf16</code> parameter indicates whether
+ the content should be decoded as UTF-16 (true) or UTF-8 (false) code points when converting to
+ App Inventor strings. After the strings are read, the
+ <a href="#StringsReceived"><code>StringsReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;utf16&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the string content as UTF-16 (true) or UTF-8 (false) code points.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.RegisterForBytes" class="method"><i></i> RegisterForBytes(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>)</dt>
+  <dd>Registers to receive updates when one or more 8-bit integer values from a connected BluetoothLE
+ device are changed. Service Unique ID and Characteristic Unique ID are required. The
+ <code>signed</code> parameter indicates whether the bytes should be interpreted as signed
+ values or not when being converted into App Inventor numbers. Whenever a change is received,
+ the <a href="#BytesReceived"><code>BytesReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the bytes as signed (true) or unsigned (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.RegisterForFloats" class="method"><i></i> RegisterForFloats(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">shortFloat</em>)</dt>
+  <dd>Registers to receive updates when one or more IEEE 754 floating point numbers from a connected
+ BluetoothLE device are changed. Service Unique ID and Characteristic Unique ID are required. The
+ <code>shortFloat</code> parameter indicates whether the floats are either 16-bit half-precision
+ floating point or 32-bit single precision floating point numbers. Whenever a change is received,
+ the <a href="#FloatsReceived"><code>FloatsReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;shortFloat&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the floats as 16-bit half-precision (true) or 32-bit single-precision (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.RegisterForIntegers" class="method"><i></i> RegisterForIntegers(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>)</dt>
+  <dd>Registers to receive updates when one or more 32-bit integer values from a connected BluetoothLE
+ device are changed. Service Unique ID and Characteristic Unique ID are required. The
+ <code>signed</code> parameter indicates whether the integers should be interpreted as signed
+ values or not when being converted into App Inventor numbers. Whenever a change is received,
+ the <a href="#IntegersReceived"><code>IntegersReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the integers as signed (true) or unsigned (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.RegisterForShorts" class="method"><i></i> RegisterForShorts(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>)</dt>
+  <dd>Registers to receive updates when one or more 16-bit integer values from a connected BluetoothLE
+ device are changed. Service Unique ID and Characteristic Unique ID are required. The
+ <code>signed</code> parameter indicates whether the shorts should be interpreted as signed
+ values or not when being converted into App Inventor numbers. Whenever a change is received,
+ the <a href="#ShortsReceived"><code>ShortsReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the shorts as signed (true) or unsigned (false).
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.RegisterForStrings" class="method"><i></i> RegisterForStrings(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">utf16</em>)</dt>
+  <dd>Registers to receive updates when one or more null-terminated strings from a connected
+ BluetoothLE device are changed. Service Unique ID and Characteristic Unique ID are required. The
+ <code>utf16</code> parameter indicates whether the content should be decoded as UTF-16 (true)
+ or UTF-8 (false) code points when converting to App Inventor strings. Whenever a change is
+ received, the <a href="#StringsReceived"><code>StringsReceived</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;utf16&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the string content as UTF-16 (true) or UTF-8 (false) code points.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ScanAdvertisements" class="method"><i></i> ScanAdvertisements(<em class="number">scanPeriod</em>)</dt>
+  <dd>Scans for advertising Bluetooth low energy devices.</dd>
+</dl>
+
+<p><strong>Parameter</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;scanPeriod&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The amount of time to spend scanning, in milliseconds.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.ServiceByIndex" class="method returns text"><i></i> ServiceByIndex(<em class="number">index</em>)</dt>
+  <dd>Returns the Unique ID of the service at the given index in the service list.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;index&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The index of the desired service, which must be between 1 and the length of the service list.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.StartAdvertising" class="method"><i></i> StartAdvertising(<em class="text">inData</em>,<em class="text">serviceUuid</em>)</dt>
+  <dd>Creates and publishes a Bluetooth low energy advertisement.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;inData&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The data to be included in the service advertisement.
+ * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.StartScanning" class="method"><i></i> StartScanning()</dt>
+  <dd>Starts scanning for Bluetooth low energy devices.</dd>
+  <dt id="BluetoothLE.StopAdvertising" class="method"><i></i> StopAdvertising()</dt>
+  <dd>Stops Bluetooth low energy advertisement from a previous call to
+ <a href="#StartAdvertising"><code>StartAdvertising</code></a>.</dd>
+  <dt id="BluetoothLE.StopScanning" class="method"><i></i> StopScanning()</dt>
+  <dd>Stops scanning for Bluetooth low energy devices.</dd>
+  <dt id="BluetoothLE.StopScanningAdvertisements" class="method"><i></i> StopScanningAdvertisements()</dt>
+  <dd>Stops scanning for Bluetooth low energy advertisements.</dd>
+  <dt id="BluetoothLE.SupportedCharacteristics" class="method returns text"><i></i> SupportedCharacteristics()</dt>
+  <dd>Returns a list of supported characteristic for the connected device as a string.</dd>
+  <dt id="BluetoothLE.SupportedServices" class="method returns text"><i></i> SupportedServices()</dt>
+  <dd>Returns the list of supported service for the connected device as a string.</dd>
+  <dt id="BluetoothLE.UnregisterForValues" class="method"><i></i> UnregisterForValues(<em class="text">service_uuid</em>,<em class="text">characteristic_uuid</em>)</dt>
+  <dd>Unregisters for updates from the given service and characteristic.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteBytes" class="method"><i></i> WriteBytes(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more 8-bit integer values to a connected BluetoothLE device. Service Unique ID
+ and Characteristic Unique ID are required. The values parameter can either be a single numeric
+ value or a list of values. If <code>signed</code> is true, the acceptable values are
+ between -128 and 127. If <code>signed</code> is false, the acceptable values are
+ between 0 and 255.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the bytes as signed (true) or unsigned (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteBytesWithResponse" class="method"><i></i> WriteBytesWithResponse(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more 8-bit integer values to a connected BluetoothLE device and waits for an
+ acknowledgement via the <a href="#BytesWritten"><code>BytesWritten</code></a> event.
+ Service Unique ID and Characteristic Unique ID are required. The values parameter can either
+ be a single numeric value or a list of values. If <code>signed</code> is true, the acceptable
+ values are between -128 and 127. If <code>signed</code> is false, the acceptable values are
+ between 0 and 255.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the bytes as signed (true) or unsigned (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteFloats" class="method"><i></i> WriteFloats(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">shortFloat</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more IEEE 754 floating point numbers to a connected BluetoothLE device. Service Unique ID
+ and Characteristic Unique ID are required. The values parameter can either be a single numeric
+ value or a list of values. If <code>shortFloat</code> is true, then each numeric value will be
+ compressed to fit into a 16-bit half-precision floating point value. If <code>shortFloat</code>
+ is false, then each numeric value will be sent as a 32-bit single precision floating point value.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;shortFloat&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the floats as 16-bit half-precision (true) or 32-bit single-precision (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteFloatsWithResponse" class="method"><i></i> WriteFloatsWithResponse(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">shortFloat</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more IEEE 754 floating point values to a connected BluetoothLE device and waits for an
+ acknowledgement via the <a href="#FloatsWritten"><code>FloatsWritten</code></a> event.
+ Service Unique ID and Characteristic Unique ID are required. The values parameter can either
+ be a single numeric value or a list of values. If <code>shortFloat</code> is false,
+ then each numeric value will be sent as a 32-bit single precision floating point value.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;shortFloat&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the floats as 16-bit half-precision (true) or 32-bit single-precision (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteIntegers" class="method"><i></i> WriteIntegers(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more 32-bit integer values to a connected BluetoothLE device. Service Unique ID
+ and Characteristic Unique ID are required. The values parameter can either be a single numeric
+ value or a list of values. If <code>signed</code> is true, the acceptable values are
+ between -2147483648 and 2147483647. If <code>signed</code> is false, the acceptable values are
+ between 0 and 4294967295.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the integers as signed (true) or unsigned (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteIntegersWithResponse" class="method"><i></i> WriteIntegersWithResponse(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more 32-bit integer values to a connected BluetoothLE device and waits for an
+ acknowledgement via the <a href="#IntegersWritten"><code>IntegersWritten</code></a> event.
+ Service Unique ID and Characteristic Unique ID are required. The values parameter can either
+ be a single numeric value or a list of values. If <code>signed</code> is true, the acceptable
+ values are between -2147483648 and 2147483647. If <code>signed</code> is false, the acceptable
+ values are between 0 and 4294967295.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the integers as signed (true) or unsigned (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteShorts" class="method"><i></i> WriteShorts(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more 16-bit integer values to a connected BluetoothLE device. Service Unique ID
+ and Characteristic Unique ID are required. The values parameter can either be a single numeric
+ value or a list of values. If <code>signed</code> is true, the acceptable values are
+ between -32768 and 32767. If <code>signed</code> is false, the acceptable values are
+ between 0 and 65535.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the shorts as signed (true) or unsigned (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteShortsWithResponse" class="method"><i></i> WriteShortsWithResponse(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">signed</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more 16-bit integer values to a connected BluetoothLE device and waits for an
+ acknowledgement via the <a href="#ShortsWritten"><code>ShortsWritten</code></a> event.
+ Service Unique ID and Characteristic Unique ID are required. The values parameter can either
+ be a single numeric value or a list of values. If <code>signed</code> is true, the acceptable
+ values are between -32768 and 32767. If <code>signed</code> is false, the acceptable values
+ are between 0 and 65535.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;signed&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Interpret the shorts as signed (true) or unsigned (false).
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteStrings" class="method"><i></i> WriteStrings(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">utf16</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more strings to a connected BluetoothLE device. Service Unique ID and
+ Characteristic Unique ID are required. The values parameter can either be a single string or a
+ list of strings. If <code>utf16</code> is true, the string(s) will be sent using UTF-16 little
+ endian encoding. If <code>utf16</code> is false, the string(s) will be sent using UTF-8
+ encoding.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;utf16&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Send the string encoded as UTF-16 little endian (true) or UTF-8 (false) code points.
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="BluetoothLE.WriteStringsWithResponse" class="method"><i></i> WriteStringsWithResponse(<em class="text">serviceUuid</em>,<em class="text">characteristicUuid</em>,<em class="boolean">utf16</em>,<em class="any">values</em>)</dt>
+  <dd>Writes one or more strings to a connected BluetoothLE device and waits for an acknowledgement
+ via the <a href="#StringsWritten"><code>StringsWritten</code></a> event. Service Unique ID and
+ Characteristic Unique ID are required. The values parameter can either be a single string or a
+ list of values. If <code>utf16</code> is true, the string(s) will be sent using UTF-16 little
+ endian encoding. If <code>utf16</code> is false, the string(s) will be sent using UTF-8
+ encoding.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;serviceUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the service passed in the read or register call.
+ * &lt;code&gt;characteristicUuid&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash;
+   The unique identifier of the characteristic in the read or register call.
+ * &lt;code&gt;utf16&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/logic.html#true" target="_blank"&gt;_boolean_&lt;/a&gt;)
+   Send the string encoded as UTF-16 little endian (true) or UTF-8 (false) code points.
+ * &lt;code&gt;values&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of values to write to the device.
+</code></pre></div></div>
+
+<h2 id="Microbit">Microbit</h2>
+
+<p>Component for Microbit</p>
+
+<h3 id="Microbit-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device.</dd>
+</dl>
+
+<h3 id="Microbit-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit.AccelerometerDataReceived">AccelerometerDataReceived(<em class="number">Accelerometer_X_</em>,<em class="number">Accelerometer_Y</em>,<em class="number">Accelerometer_Z</em>)</dt>
+  <dd>Event for AccelerometerDataReceived</dd>
+  <dt id="Microbit.AccelerometerPeriodReceived">AccelerometerPeriodReceived(<em class="number">Accelerometer_Period</em>)</dt>
+  <dd>Event for AccelerometerPeriodReceived</dd>
+  <dt id="Microbit.AppearanceReceived">AppearanceReceived(<em class="number">Category</em>)</dt>
+  <dd>Event for AppearanceReceived</dd>
+  <dt id="Microbit.ButtonAStateReceived">ButtonAStateReceived(<em class="number">Button_State_Value</em>)</dt>
+  <dd>Event for ButtonAStateReceived</dd>
+  <dt id="Microbit.ButtonBStateReceived">ButtonBStateReceived(<em class="number">Button_State_Value</em>)</dt>
+  <dd>Event for ButtonBStateReceived</dd>
+  <dt id="Microbit.DFUControlReceived">DFUControlReceived(<em class="number">dfu_control</em>)</dt>
+  <dd>Event for DFUControlReceived</dd>
+  <dt id="Microbit.DeviceNameReceived">DeviceNameReceived(<em class="text">Name</em>)</dt>
+  <dd>Event for DeviceNameReceived</dd>
+  <dt id="Microbit.FirmwareRevisionStringReceived">FirmwareRevisionStringReceived(<em class="text">Firmware_Revision</em>)</dt>
+  <dd>Event for FirmwareRevisionStringReceived</dd>
+  <dt id="Microbit.HardwareRevisionStringReceived">HardwareRevisionStringReceived(<em class="text">Hardware_Revision</em>)</dt>
+  <dd>Event for HardwareRevisionStringReceived</dd>
+  <dt id="Microbit.LEDMatrixStateReceived">LEDMatrixStateReceived(<em class="list">LED_Matrix_State</em>)</dt>
+  <dd>Event for LEDMatrixStateReceived</dd>
+  <dt id="Microbit.MagnetometerBearingReceived">MagnetometerBearingReceived(<em class="number">bearing_value</em>)</dt>
+  <dd>Event for MagnetometerBearingReceived</dd>
+  <dt id="Microbit.MagnetometerDataReceived">MagnetometerDataReceived(<em class="number">Magnetometer_X</em>,<em class="number">Magnetometer_Y</em>,<em class="number">Magnetometer_Z</em>)</dt>
+  <dd>Event for MagnetometerDataReceived</dd>
+  <dt id="Microbit.MagnetometerPeriodReceived">MagnetometerPeriodReceived(<em class="number">Magnetometer_Period</em>)</dt>
+  <dd>Event for MagnetometerPeriodReceived</dd>
+  <dt id="Microbit.ManufacturerNameStringReceived">ManufacturerNameStringReceived(<em class="text">Manufacturer_Name</em>)</dt>
+  <dd>Event for ManufacturerNameStringReceived</dd>
+  <dt id="Microbit.MicroBitEventReceived">MicroBitEventReceived(<em class="number">Event_Type_And_Value</em>)</dt>
+  <dd>Event for MicroBitEventReceived</dd>
+  <dt id="Microbit.MicroBitRequirementsReceived">MicroBitRequirementsReceived(<em class="number">microbit_reqs_value</em>)</dt>
+  <dd>Event for MicroBitRequirementsReceived</dd>
+  <dt id="Microbit.ModelNumberStringReceived">ModelNumberStringReceived(<em class="text">Model_Number</em>)</dt>
+  <dd>Event for ModelNumberStringReceived</dd>
+  <dt id="Microbit.PeripheralPreferredConnectionParametersReceived">PeripheralPreferredConnectionParametersReceived(<em class="number">Minimum_Connection_Interval</em>,<em class="number">Maximum_Connection_Interval</em>,<em class="number">Slave_Latency</em>,<em class="number">Connection_Supervision_Timeout_Multiplier</em>)</dt>
+  <dd>Event for PeripheralPreferredConnectionParametersReceived</dd>
+  <dt id="Microbit.PinADConfigurationReceived">PinADConfigurationReceived(<em class="list">Pin_AD_Config_Value</em>)</dt>
+  <dd>Event for PinADConfigurationReceived</dd>
+  <dt id="Microbit.PinDataReceived">PinDataReceived(<em class="list">IO_Pin_Data</em>)</dt>
+  <dd>Event for PinDataReceived</dd>
+  <dt id="Microbit.PinIOConfigurationReceived">PinIOConfigurationReceived(<em class="list">Pin_IO_Config_Value</em>)</dt>
+  <dd>Event for PinIOConfigurationReceived</dd>
+  <dt id="Microbit.ScrollingDelayReceived">ScrollingDelayReceived(<em class="number">Scrolling_Delay_Value</em>)</dt>
+  <dd>Event for ScrollingDelayReceived</dd>
+  <dt id="Microbit.SerialNumberStringReceived">SerialNumberStringReceived(<em class="text">Serial_Number</em>)</dt>
+  <dd>Event for SerialNumberStringReceived</dd>
+  <dt id="Microbit.TXCharacteristicReceived">TXCharacteristicReceived(<em class="list">UART_TX_Field</em>)</dt>
+  <dd>Event for TXCharacteristicReceived</dd>
+  <dt id="Microbit.TemperaturePeriodReceived">TemperaturePeriodReceived(<em class="number">temperature_period_value</em>)</dt>
+  <dd>Event for TemperaturePeriodReceived</dd>
+  <dt id="Microbit.TemperatureReceived">TemperatureReceived(<em class="number">temperature_value</em>)</dt>
+  <dd>Event for TemperatureReceived</dd>
+  <dt id="Microbit.WroteAccelerometerPeriod">WroteAccelerometerPeriod(<em class="number">Accelerometer_Period</em>)</dt>
+  <dd>Event for WroteAccelerometerPeriod</dd>
+  <dt id="Microbit.WroteClientEvent">WroteClientEvent(<em class="number">Event_Types_And_Values</em>)</dt>
+  <dd>Event for WroteClientEvent</dd>
+  <dt id="Microbit.WroteClientRequirements">WroteClientRequirements(<em class="number">Client_Requirements_Value</em>)</dt>
+  <dd>Event for WroteClientRequirements</dd>
+  <dt id="Microbit.WroteDFUControl">WroteDFUControl(<em class="number">dfu_control</em>)</dt>
+  <dd>Event for WroteDFUControl</dd>
+  <dt id="Microbit.WroteDeviceName">WroteDeviceName(<em class="text">Name</em>)</dt>
+  <dd>Event for WroteDeviceName</dd>
+  <dt id="Microbit.WroteLEDMatrixState">WroteLEDMatrixState(<em class="list">LED_Matrix_State</em>)</dt>
+  <dd>Event for WroteLEDMatrixState</dd>
+  <dt id="Microbit.WroteLEDText">WroteLEDText(<em class="text">LED_Text_Value</em>)</dt>
+  <dd>Event for WroteLEDText</dd>
+  <dt id="Microbit.WroteMagnetometerPeriod">WroteMagnetometerPeriod(<em class="number">Magnetometer_Period</em>)</dt>
+  <dd>Event for WroteMagnetometerPeriod</dd>
+  <dt id="Microbit.WrotePWMControl">WrotePWMControl(<em class="list">PWM_Control_Field</em>)</dt>
+  <dd>Event for WrotePWMControl</dd>
+  <dt id="Microbit.WrotePinADConfiguration">WrotePinADConfiguration(<em class="list">Pin_AD_Config_Value</em>)</dt>
+  <dd>Event for WrotePinADConfiguration</dd>
+  <dt id="Microbit.WrotePinData">WrotePinData(<em class="list">IO_Pin_Data</em>)</dt>
+  <dd>Event for WrotePinData</dd>
+  <dt id="Microbit.WrotePinIOConfiguration">WrotePinIOConfiguration(<em class="list">Pin_IO_Config_Value</em>)</dt>
+  <dd>Event for WrotePinIOConfiguration</dd>
+  <dt id="Microbit.WroteRXCharacteristic">WroteRXCharacteristic(<em class="list">UART_TX_Field</em>)</dt>
+  <dd>Event for WroteRXCharacteristic</dd>
+  <dt id="Microbit.WroteScrollingDelay">WroteScrollingDelay(<em class="number">Scrolling_Delay_Value</em>)</dt>
+  <dd>Event for WroteScrollingDelay</dd>
+  <dt id="Microbit.WroteTemperaturePeriod">WroteTemperaturePeriod(<em class="number">temperature_period_value</em>)</dt>
+  <dd>Event for WroteTemperaturePeriod</dd>
+</dl>
+
+<h3 id="Microbit-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit.ReadAccelerometerData" class="method"><i></i> ReadAccelerometerData()</dt>
+  <dd>Method for ReadAccelerometerData</dd>
+  <dt id="Microbit.ReadAccelerometerPeriod" class="method"><i></i> ReadAccelerometerPeriod()</dt>
+  <dd>Method for ReadAccelerometerPeriod</dd>
+  <dt id="Microbit.ReadAppearance" class="method"><i></i> ReadAppearance()</dt>
+  <dd>Method for ReadAppearance</dd>
+  <dt id="Microbit.ReadButtonAState" class="method"><i></i> ReadButtonAState()</dt>
+  <dd>Method for ReadButtonAState</dd>
+  <dt id="Microbit.ReadButtonBState" class="method"><i></i> ReadButtonBState()</dt>
+  <dd>Method for ReadButtonBState</dd>
+  <dt id="Microbit.ReadDFUControl" class="method"><i></i> ReadDFUControl()</dt>
+  <dd>Method for ReadDFUControl</dd>
+  <dt id="Microbit.ReadDeviceName" class="method"><i></i> ReadDeviceName()</dt>
+  <dd>Method for ReadDeviceName</dd>
+  <dt id="Microbit.ReadFirmwareRevisionString" class="method"><i></i> ReadFirmwareRevisionString()</dt>
+  <dd>Method for ReadFirmwareRevisionString</dd>
+  <dt id="Microbit.ReadHardwareRevisionString" class="method"><i></i> ReadHardwareRevisionString()</dt>
+  <dd>Method for ReadHardwareRevisionString</dd>
+  <dt id="Microbit.ReadLEDMatrixState" class="method"><i></i> ReadLEDMatrixState()</dt>
+  <dd>Method for ReadLEDMatrixState</dd>
+  <dt id="Microbit.ReadMagnetometerBearing" class="method"><i></i> ReadMagnetometerBearing()</dt>
+  <dd>Method for ReadMagnetometerBearing</dd>
+  <dt id="Microbit.ReadMagnetometerData" class="method"><i></i> ReadMagnetometerData()</dt>
+  <dd>Method for ReadMagnetometerData</dd>
+  <dt id="Microbit.ReadMagnetometerPeriod" class="method"><i></i> ReadMagnetometerPeriod()</dt>
+  <dd>Method for ReadMagnetometerPeriod</dd>
+  <dt id="Microbit.ReadManufacturerNameString" class="method"><i></i> ReadManufacturerNameString()</dt>
+  <dd>Method for ReadManufacturerNameString</dd>
+  <dt id="Microbit.ReadMicroBitEvent" class="method"><i></i> ReadMicroBitEvent()</dt>
+  <dd>Method for ReadMicroBitEvent</dd>
+  <dt id="Microbit.ReadMicroBitRequirements" class="method"><i></i> ReadMicroBitRequirements()</dt>
+  <dd>Method for ReadMicroBitRequirements</dd>
+  <dt id="Microbit.ReadModelNumberString" class="method"><i></i> ReadModelNumberString()</dt>
+  <dd>Method for ReadModelNumberString</dd>
+  <dt id="Microbit.ReadPeripheralPreferredConnectionParameters" class="method"><i></i> ReadPeripheralPreferredConnectionParameters()</dt>
+  <dd>Method for ReadPeripheralPreferredConnectionParameters</dd>
+  <dt id="Microbit.ReadPinADConfiguration" class="method"><i></i> ReadPinADConfiguration()</dt>
+  <dd>Method for ReadPinADConfiguration</dd>
+  <dt id="Microbit.ReadPinData" class="method"><i></i> ReadPinData()</dt>
+  <dd>Method for ReadPinData</dd>
+  <dt id="Microbit.ReadPinIOConfiguration" class="method"><i></i> ReadPinIOConfiguration()</dt>
+  <dd>Method for ReadPinIOConfiguration</dd>
+  <dt id="Microbit.ReadScrollingDelay" class="method"><i></i> ReadScrollingDelay()</dt>
+  <dd>Method for ReadScrollingDelay</dd>
+  <dt id="Microbit.ReadSerialNumberString" class="method"><i></i> ReadSerialNumberString()</dt>
+  <dd>Method for ReadSerialNumberString</dd>
+  <dt id="Microbit.ReadTemperature" class="method"><i></i> ReadTemperature()</dt>
+  <dd>Method for ReadTemperature</dd>
+  <dt id="Microbit.ReadTemperaturePeriod" class="method"><i></i> ReadTemperaturePeriod()</dt>
+  <dd>Method for ReadTemperaturePeriod</dd>
+  <dt id="Microbit.RequestAccelerometerDataUpdates" class="method"><i></i> RequestAccelerometerDataUpdates()</dt>
+  <dd>Method for RequestAccelerometerDataUpdates</dd>
+  <dt id="Microbit.RequestButtonAStateUpdates" class="method"><i></i> RequestButtonAStateUpdates()</dt>
+  <dd>Method for RequestButtonAStateUpdates</dd>
+  <dt id="Microbit.RequestButtonBStateUpdates" class="method"><i></i> RequestButtonBStateUpdates()</dt>
+  <dd>Method for RequestButtonBStateUpdates</dd>
+  <dt id="Microbit.RequestMagnetometerBearingUpdates" class="method"><i></i> RequestMagnetometerBearingUpdates()</dt>
+  <dd>Method for RequestMagnetometerBearingUpdates</dd>
+  <dt id="Microbit.RequestMagnetometerDataUpdates" class="method"><i></i> RequestMagnetometerDataUpdates()</dt>
+  <dd>Method for RequestMagnetometerDataUpdates</dd>
+  <dt id="Microbit.RequestMicroBitEventUpdates" class="method"><i></i> RequestMicroBitEventUpdates()</dt>
+  <dd>Method for RequestMicroBitEventUpdates</dd>
+  <dt id="Microbit.RequestMicroBitRequirementsUpdates" class="method"><i></i> RequestMicroBitRequirementsUpdates()</dt>
+  <dd>Method for RequestMicroBitRequirementsUpdates</dd>
+  <dt id="Microbit.RequestPinDataUpdates" class="method"><i></i> RequestPinDataUpdates()</dt>
+  <dd>Method for RequestPinDataUpdates</dd>
+  <dt id="Microbit.RequestTXCharacteristic" class="method"><i></i> RequestTXCharacteristic()</dt>
+  <dd>Method for RequestTXCharacteristic</dd>
+  <dt id="Microbit.RequestTemperatureUpdates" class="method"><i></i> RequestTemperatureUpdates()</dt>
+  <dd>Method for RequestTemperatureUpdates</dd>
+  <dt id="Microbit.StopAccelerometerDataUpdates" class="method"><i></i> StopAccelerometerDataUpdates()</dt>
+  <dd>Method for StopAccelerometerDataUpdates</dd>
+  <dt id="Microbit.StopButtonAStateUpdates" class="method"><i></i> StopButtonAStateUpdates()</dt>
+  <dd>Method for StopButtonAStateUpdates</dd>
+  <dt id="Microbit.StopButtonBStateUpdates" class="method"><i></i> StopButtonBStateUpdates()</dt>
+  <dd>Method for StopButtonBStateUpdates</dd>
+  <dt id="Microbit.StopMagnetometerBearingUpdates" class="method"><i></i> StopMagnetometerBearingUpdates()</dt>
+  <dd>Method for StopMagnetometerBearingUpdates</dd>
+  <dt id="Microbit.StopMagnetometerDataUpdates" class="method"><i></i> StopMagnetometerDataUpdates()</dt>
+  <dd>Method for StopMagnetometerDataUpdates</dd>
+  <dt id="Microbit.StopMicroBitEventUpdates" class="method"><i></i> StopMicroBitEventUpdates()</dt>
+  <dd>Method for StopMicroBitEventUpdates</dd>
+  <dt id="Microbit.StopMicroBitRequirementsUpdates" class="method"><i></i> StopMicroBitRequirementsUpdates()</dt>
+  <dd>Method for StopMicroBitRequirementsUpdates</dd>
+  <dt id="Microbit.StopPinDataUpdates" class="method"><i></i> StopPinDataUpdates()</dt>
+  <dd>Method for StopPinDataUpdates</dd>
+  <dt id="Microbit.StopTXCharacteristicUpdates" class="method"><i></i> StopTXCharacteristicUpdates()</dt>
+  <dd>Method for StopTXCharacteristicUpdates</dd>
+  <dt id="Microbit.StopTemperatureUpdates" class="method"><i></i> StopTemperatureUpdates()</dt>
+  <dd>Method for StopTemperatureUpdates</dd>
+  <dt id="Microbit.WriteAccelerometerPeriod" class="method"><i></i> WriteAccelerometerPeriod(<em class="number">value</em>)</dt>
+  <dd>Method for WriteAccelerometerPeriod</dd>
+  <dt id="Microbit.WriteClientEvent" class="method"><i></i> WriteClientEvent(<em class="any">Event_Types_And_Values</em>)</dt>
+  <dd>Method for WriteClientEvent</dd>
+  <dt id="Microbit.WriteClientRequirements" class="method"><i></i> WriteClientRequirements(<em class="any">client_requirements_value</em>)</dt>
+  <dd>Method for WriteClientRequirements</dd>
+  <dt id="Microbit.WriteDFUControl" class="method"><i></i> WriteDFUControl(<em class="number">dfu_control</em>)</dt>
+  <dd>Method for WriteDFUControl</dd>
+  <dt id="Microbit.WriteDeviceName" class="method"><i></i> WriteDeviceName(<em class="text">name</em>)</dt>
+  <dd>Method for WriteDeviceName</dd>
+  <dt id="Microbit.WriteLEDMatrixState" class="method"><i></i> WriteLEDMatrixState(<em class="any">LED_Matrix_State</em>)</dt>
+  <dd>Method for WriteLEDMatrixState</dd>
+  <dt id="Microbit.WriteLEDText" class="method"><i></i> WriteLEDText(<em class="text">LED_Text_Value</em>)</dt>
+  <dd>Method for WriteLEDText</dd>
+  <dt id="Microbit.WriteMagnetometerPeriod" class="method"><i></i> WriteMagnetometerPeriod(<em class="number">Magnetometer_Period</em>)</dt>
+  <dd>Method for WriteMagnetometerPeriod</dd>
+  <dt id="Microbit.WritePWMControl" class="method"><i></i> WritePWMControl(<em class="any">PWM_Control_Field</em>)</dt>
+  <dd>Method for WritePWMControl</dd>
+  <dt id="Microbit.WritePinADConfiguration" class="method"><i></i> WritePinADConfiguration(<em class="any">Pin_AD_Config_Value</em>)</dt>
+  <dd>Method for WritePinADConfiguration</dd>
+  <dt id="Microbit.WritePinData" class="method"><i></i> WritePinData(<em class="any">IO_Pin_Data</em>)</dt>
+  <dd>Method for WritePinData</dd>
+  <dt id="Microbit.WritePinIOConfiguration" class="method"><i></i> WritePinIOConfiguration(<em class="any">Pin_IO_Config_Value</em>)</dt>
+  <dd>Method for WritePinIOConfiguration</dd>
+  <dt id="Microbit.WriteRXCharacteristic" class="method"><i></i> WriteRXCharacteristic(<em class="any">UART_TX</em>)</dt>
+  <dd>Method for WriteRXCharacteristic</dd>
+  <dt id="Microbit.WriteScrollingDelay" class="method"><i></i> WriteScrollingDelay(<em class="number">Scrolling_Delay_Value</em>)</dt>
+  <dd>Method for WriteScrollingDelay</dd>
+  <dt id="Microbit.WriteTemperaturePeriod" class="method"><i></i> WriteTemperaturePeriod(<em class="number">value</em>)</dt>
+  <dd>Method for WriteTemperaturePeriod</dd>
+</dl>
+
+<h2 id="Microbit_Accelerometer">Microbit_Accelerometer</h2>
+
+<p>Component for Microbit_Accelerometer</p>
+
+<h3 id="Microbit_Accelerometer-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Accelerometer.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Accelerometer-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Accelerometer.AccelerometerDataReceived">AccelerometerDataReceived(<em class="number">Accelerometer_X</em>,<em class="number">Accelerometer_Y</em>,<em class="number">Accelerometer_Z</em>)</dt>
+  <dd>The <code>AccelerometerDataReceived</code> event is run whenever accelerometer samples are
+ received from the micro:bit. This is usually a result of performing a
+ <a href="#ReadAccelerometerData">read</a> or
+ <a href="#RequestAccelerometerDataUpdates">request</a> operation.
+ The X, Y, and Z values are in thousands of 1 Earth gravity (G=-9.8 m/s<sup>2</sup>), and so
+ should be scaled by 1/1000.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;Accelerometer_X&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The X value of the accelerometer, in milliG.
++ &lt;code&gt;Accelerometer_Y&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The Y value of the accelerometer, in milliG.
++ &lt;code&gt;Accelerometer_Z&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The Z value of the accelerometer, in milliG.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Accelerometer.AccelerometerPeriodReceived">AccelerometerPeriodReceived(<em class="number">Accelerometer_Period</em>)</dt>
+  <dd>The <code>AccelerometerPeriodReceived</code> event is run after the micro:bit’s accelerometer
+ period is read from the device.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;Accelerometer_Period&lt;/code&gt; (_number_) &amp;mdash; The current reporting interval for the micro:bit's accelerometer, in milliseconds.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Accelerometer.WroteAccelerometerPeriod">WroteAccelerometerPeriod(<em class="number">Accelerometer_Period</em>)</dt>
+  <dd>The <code>WroteAccelerometerPeriod</code> event is run after the micro:bit reports its period
+ as requested by an earlier call to the
+ <a href="#ReadAccelerometerPeriod"><code>ReadAccelerometerPeriod</code></a> method.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;Accelerometer_Period&lt;/code&gt; (_number_) &amp;mdash; The reporting period for the micro:bit's accelerometer, in milliseconds.
+</code></pre></div></div>
+
+<h3 id="Microbit_Accelerometer-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Accelerometer.ReadAccelerometerData" class="method"><i></i> ReadAccelerometerData()</dt>
+  <dd>Read a single sample of accelerometer data from the micro:bit. On successful read, the
+ <a href="#AccelerometerDataReceived"><code>AccelerometerDataReceived</code></a>
+ event will be run.</dd>
+  <dt id="Microbit_Accelerometer.ReadAccelerometerPeriod" class="method"><i></i> ReadAccelerometerPeriod()</dt>
+  <dd>Read the current report rate for the micro:bit accelerometer. After the period is read, it will
+ be received by the
+ <a href="#AccelerometerPeriodReceived"><code>AccelerometerPeriodReceived</code></a> event.</dd>
+  <dt id="Microbit_Accelerometer.RequestAccelerometerDataUpdates" class="method"><i></i> RequestAccelerometerDataUpdates()</dt>
+  <dd>Request notifications of changes in the micro:bit’s accelerometer. Changes in the accelerometer
+ will be reported at a rate determined by the last period value set by a call to
+ <a href="#WriteAccelerometerPeriod"><code>WriteAccelerometerPeriod</code></a>. Accelerometer
+ data will be reported through the
+ <a href="#AccelerometerDataReceived"><code>AccelerometerDataReceived</code></a> event.</dd>
+  <dt id="Microbit_Accelerometer.StopAccelerometerDataUpdates" class="method"><i></i> StopAccelerometerDataUpdates()</dt>
+  <dd>Stop receiving updates from the micro:bit’s accelerometer. Note that there may be pending
+ messages from the device that will still be reported through the
+ <a href="#AccelerometerDataReceived"><code>AccelerometerDataReceived</code></a> event.</dd>
+  <dt id="Microbit_Accelerometer.WriteAccelerometerPeriod" class="method"><i></i> WriteAccelerometerPeriod(<em class="number">period</em>)</dt>
+  <dd>Use the <code>WriteAccelerometerPeriod</code> method to change how frequently the micro:bit
+ sends accelerometer data to App Inventor. The period is measured in milliseconds. According to
+ the micro:bit specification, valid values are 1, 2, 5, 10, 20, 80, 160, and 640 milliseconds.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;period&lt;/code&gt; (_number_) &amp;mdash; The new accelerometer reporting period, in milliseconds.
+</code></pre></div></div>
+
+<h2 id="Microbit_Button">Microbit_Button</h2>
+
+<p>Component for Microbit_Button</p>
+
+<h3 id="Microbit_Button-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Button.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Button-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Button.ButtonAStateReceived">ButtonAStateReceived(<em class="number">Button_State_Value</em>)</dt>
+  <dd>After performing a <a href="#ReadButtonAState">read</a> or
+ <a href="#RequestButtonAStateUpdates">request for updates</a>, the
+ <code>ButtonAStateReceived</code> event will be run with information about the button state.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<ul>
+  <li><code>Button_State_Value</code> (<a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"><em>number</em></a>) — The state of the micro:bit’s A button; 0 for released, 1 for pressed, 2 for long-pressed.</li>
+</ul>
+
+<dl>
+  <dt id="Microbit_Button.ButtonBStateReceived">ButtonBStateReceived(<em class="number">Button_State_Value</em>)</dt>
+  <dd>After performing a <a href="#ReadButtonBState">read</a> or
+ <a href="#RequestButtonBStateUpdates">request for updates</a>, the
+ <code>ButtonBStateReceived</code> event will be run with information about the button state.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<ul>
+  <li><code>Button_State_Value</code> (<a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"><em>number</em></a>) — The state of the micro:bit’s B button; 0 for released, 1 for pressed, 2 for long-pressed.</li>
+</ul>
+
+<h3 id="Microbit_Button-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Button.ReadButtonAState" class="method"><i></i> ReadButtonAState()</dt>
+  <dd>Read the current state of the micro:bit’s A button. After a successful read, the
+ <a href="#ButtonAStateReceived"><code>ButtonAStateReceived</code></a> event will be run.</dd>
+  <dt id="Microbit_Button.ReadButtonBState" class="method"><i></i> ReadButtonBState()</dt>
+  <dd>Read the current state of the micro:bit’s B button. After a successful read, the
+ <a href="#ButtonBStateReceived"><code>ButtonBStateReceived</code></a> event will be run.</dd>
+  <dt id="Microbit_Button.RequestButtonAStateUpdates" class="method"><i></i> RequestButtonAStateUpdates()</dt>
+  <dd>Request updates to the state of the micro:bit’s A button. After requesting updates, the
+ <a href="#ButtonAStateReceived"><code>ButtonAStateReceived</code></a> will be run whenever
+ the micro:bit reports a button state change to the app. Pressing and holding the button
+ will result in a second event with the value 2 to indicate a long press.</dd>
+  <dt id="Microbit_Button.RequestButtonBStateUpdates" class="method"><i></i> RequestButtonBStateUpdates()</dt>
+  <dd>Request updates to the state of the micro:bit’s B button. After requesting updates, the
+ <a href="#ButtonBStateReceived"><code>ButtonBStateReceived</code></a> will be run whenever
+ the micro:bit reports a button state change to the app. Pressing and holding the button will
+ result in a second event with the value 2 to indicate a long press.</dd>
+  <dt id="Microbit_Button.StopButtonAStateUpdates" class="method"><i></i> StopButtonAStateUpdates()</dt>
+  <dd>Stop receiving updates about the state of the micro:bit’s A button. Note that there may
+ be pending updates that have not been processed that will result in
+ <a href="#ButtonAStateReceived"><code>ButtonAStateReceived</code></a></dd>
+  <dt id="Microbit_Button.StopButtonBStateUpdates" class="method"><i></i> StopButtonBStateUpdates()</dt>
+  <dd>Stop receiving updates about the state of the micro:bit’s B button. Note that there may be
+ pending updates that have not been processed that will result in
+ <a href="#ButtonBStateReceived"><code>ButtonBStateReceived</code></a>.</dd>
+</dl>
+
+<h2 id="Microbit_Device_Information">Microbit_Device_Information</h2>
+
+<p>Component for Microbit_Device_Information</p>
+
+<h3 id="Microbit_Device_Information-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Device_Information.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>Property for BluetoothDevice</dd>
+</dl>
+
+<h3 id="Microbit_Device_Information-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Device_Information.FirmwareRevisionStringReceived">FirmwareRevisionStringReceived(<em class="text">Firmware_Revision_String</em>)</dt>
+  <dd>Event for FirmwareRevisionStringReceived</dd>
+  <dt id="Microbit_Device_Information.HardwareRevisionStringReceived">HardwareRevisionStringReceived(<em class="text">Hardware_Revision_String</em>)</dt>
+  <dd>Event for HardwareRevisionStringReceived</dd>
+  <dt id="Microbit_Device_Information.ManufacturerNameStringReceived">ManufacturerNameStringReceived(<em class="text">Manufacturer_Name_String</em>)</dt>
+  <dd>Event for ManufacturerNameStringReceived</dd>
+  <dt id="Microbit_Device_Information.ModelNumberStringReceived">ModelNumberStringReceived(<em class="text">Model_Number_String</em>)</dt>
+  <dd>Event for ModelNumberStringReceived</dd>
+  <dt id="Microbit_Device_Information.SerialNumberStringReceived">SerialNumberStringReceived(<em class="text">Serial_Number_String</em>)</dt>
+  <dd>Event for SerialNumberStringReceived</dd>
+</dl>
+
+<h3 id="Microbit_Device_Information-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Device_Information.ReadFirmwareRevisionString" class="method"><i></i> ReadFirmwareRevisionString()</dt>
+  <dd>Method for ReadFirmwareRevisionString</dd>
+  <dt id="Microbit_Device_Information.ReadHardwareRevisionString" class="method"><i></i> ReadHardwareRevisionString()</dt>
+  <dd>Method for ReadHardwareRevisionString</dd>
+  <dt id="Microbit_Device_Information.ReadManufacturerNameString" class="method"><i></i> ReadManufacturerNameString()</dt>
+  <dd>Method for ReadManufacturerNameString</dd>
+  <dt id="Microbit_Device_Information.ReadModelNumberString" class="method"><i></i> ReadModelNumberString()</dt>
+  <dd>Method for ReadModelNumberString</dd>
+  <dt id="Microbit_Device_Information.ReadSerialNumberString" class="method"><i></i> ReadSerialNumberString()</dt>
+  <dd>Method for ReadSerialNumberString</dd>
+</dl>
+
+<h2 id="Microbit_Dfu_Control">Microbit_Dfu_Control</h2>
+
+<p>Component for Microbit_Dfu_Control</p>
+
+<h3 id="Microbit_Dfu_Control-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Dfu_Control.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>Property for BluetoothDevice</dd>
+</dl>
+
+<h3 id="Microbit_Dfu_Control-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Dfu_Control.DFUControlReceived">DFUControlReceived(<em class="number">dfu_control</em>)</dt>
+  <dd>Event for DFUControlReceived</dd>
+  <dt id="Microbit_Dfu_Control.WroteDFUControl">WroteDFUControl(<em class="number">dfu_control</em>)</dt>
+  <dd>Event for WroteDFUControl</dd>
+</dl>
+
+<h3 id="Microbit_Dfu_Control-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Dfu_Control.ReadDFUControl" class="method"><i></i> ReadDFUControl()</dt>
+  <dd>Method for ReadDFUControl</dd>
+  <dt id="Microbit_Dfu_Control.WriteDFUControl" class="method"><i></i> WriteDFUControl(<em class="number">DFU_Control</em>)</dt>
+  <dd>Method for WriteDFUControl</dd>
+</dl>
+
+<h2 id="Microbit_Event">Microbit_Event</h2>
+
+<p>Component for Microbit_Event</p>
+
+<h3 id="Microbit_Event-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Event.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>Property for BluetoothDevice</dd>
+</dl>
+
+<h3 id="Microbit_Event-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Event.MicroBitEventReceived">MicroBitEventReceived(<em class="number">Event_Type_And_Value</em>)</dt>
+  <dd>Event for MicroBitEventReceived</dd>
+  <dt id="Microbit_Event.MicroBitRequirementsReceived">MicroBitRequirementsReceived(<em class="number">microbit_reqs_value</em>)</dt>
+  <dd>Event for MicroBitRequirementsReceived</dd>
+  <dt id="Microbit_Event.WroteClientEvent">WroteClientEvent(<em class="list">Event_Types_And_Values</em>)</dt>
+  <dd>Event for WroteClientEvent</dd>
+  <dt id="Microbit_Event.WroteClientRequirements">WroteClientRequirements(<em class="list">Client_Requirements_Value</em>)</dt>
+  <dd>Event for WroteClientRequirements</dd>
+</dl>
+
+<h3 id="Microbit_Event-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Event.ReadMicroBitEvent" class="method"><i></i> ReadMicroBitEvent()</dt>
+  <dd>Method for ReadMicroBitEvent</dd>
+  <dt id="Microbit_Event.ReadMicroBitRequirements" class="method"><i></i> ReadMicroBitRequirements()</dt>
+  <dd>Method for ReadMicroBitRequirements</dd>
+  <dt id="Microbit_Event.RequestMicroBitEventUpdates" class="method"><i></i> RequestMicroBitEventUpdates()</dt>
+  <dd>Method for RequestMicroBitEventUpdates</dd>
+  <dt id="Microbit_Event.RequestMicroBitRequirementsUpdates" class="method"><i></i> RequestMicroBitRequirementsUpdates()</dt>
+  <dd>Method for RequestMicroBitRequirementsUpdates</dd>
+  <dt id="Microbit_Event.StopMicroBitEventUpdates" class="method"><i></i> StopMicroBitEventUpdates()</dt>
+  <dd>Method for StopMicroBitEventUpdates</dd>
+  <dt id="Microbit_Event.StopMicroBitRequirementsUpdates" class="method"><i></i> StopMicroBitRequirementsUpdates()</dt>
+  <dd>Method for StopMicroBitRequirementsUpdates</dd>
+  <dt id="Microbit_Event.WriteClientEvent" class="method"><i></i> WriteClientEvent(<em class="list">Event_Types_And_Values</em>)</dt>
+  <dd>Method for WriteClientEvent</dd>
+  <dt id="Microbit_Event.WriteClientRequirements" class="method"><i></i> WriteClientRequirements(<em class="list">Client_Requirements_Value</em>)</dt>
+  <dd>Method for WriteClientRequirements</dd>
+</dl>
+
+<h2 id="Microbit_Generic_Access">Microbit_Generic_Access</h2>
+
+<p>Component for Microbit_Generic_Access</p>
+
+<h3 id="Microbit_Generic_Access-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Generic_Access.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>Property for BluetoothDevice</dd>
+</dl>
+
+<h3 id="Microbit_Generic_Access-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Generic_Access.AppearanceReceived">AppearanceReceived(<em class="number">Category</em>)</dt>
+  <dd>Event for AppearanceReceived</dd>
+  <dt id="Microbit_Generic_Access.DeviceNameReceived">DeviceNameReceived(<em class="text">Name</em>)</dt>
+  <dd>Event for DeviceNameReceived</dd>
+  <dt id="Microbit_Generic_Access.PeripheralPreferredConnectionParametersReceived">PeripheralPreferredConnectionParametersReceived(<em class="number">Minimum_Connection_interval</em>,<em class="number">Maximum_Connection_Interval</em>,<em class="number">Slave_Latency</em>,<em class="number">Connection_Supervision_Timeout_Multiplier</em>)</dt>
+  <dd>Event for PeripheralPreferredConnectionParametersReceived</dd>
+  <dt id="Microbit_Generic_Access.WroteDeviceName">WroteDeviceName(<em class="text">Name</em>)</dt>
+  <dd>Event for WroteDeviceName</dd>
+</dl>
+
+<h3 id="Microbit_Generic_Access-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Generic_Access.ReadAppearance" class="method"><i></i> ReadAppearance()</dt>
+  <dd>Method for ReadAppearance</dd>
+  <dt id="Microbit_Generic_Access.ReadDeviceName" class="method"><i></i> ReadDeviceName()</dt>
+  <dd>Method for ReadDeviceName</dd>
+  <dt id="Microbit_Generic_Access.ReadPeripheralPreferredConnectionParameters" class="method"><i></i> ReadPeripheralPreferredConnectionParameters()</dt>
+  <dd>Method for ReadPeripheralPreferredConnectionParameters</dd>
+  <dt id="Microbit_Generic_Access.WriteDeviceName" class="method"><i></i> WriteDeviceName(<em class="text">Name</em>)</dt>
+  <dd>Method for WriteDeviceName</dd>
+</dl>
+
+<h2 id="Microbit_Generic_Attribute">Microbit_Generic_Attribute</h2>
+
+<p>Component for Microbit_Generic_Attribute</p>
+
+<h3 id="Microbit_Generic_Attribute-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Generic_Attribute.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>Property for BluetoothDevice</dd>
+</dl>
+
+<h3 id="Microbit_Generic_Attribute-Events">Events</h3>
+
+<p class="events">None</p>
+
+<h3 id="Microbit_Generic_Attribute-Methods">Methods</h3>
+
+<p class="methods">None</p>
+
+<h2 id="Microbit_Io_Pin">Microbit_Io_Pin</h2>
+
+<p>Component for Microbit_Io_Pin</p>
+
+<h3 id="Microbit_Io_Pin-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Io_Pin.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Io_Pin-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Io_Pin.PinADConfigurationReceived">PinADConfigurationReceived(<em class="list">Pin_AD_Config_Value</em>)</dt>
+  <dd>The <code>PinADConfigurationReceived</code> event is run after a successful call to the
+ <a href="#ReadPinADConfiguration"><code>ReadPinADConfiguration</code></a> method is returned
+ by the micro:bit.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Pin\_AD\_Config\_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of analog/digital pin states configured on the micro:bit.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.PinDataReceived">PinDataReceived(<em class="number">IO_Pin_Data</em>)</dt>
+  <dd>The <code>PinDataReceived</code> event will be run after the micro:bit sends the status of its
+ input pins. This will typically follow calls to
+ <a href="#ReadPinData"><code>ReadPinData</code></a> or
+ <a href="#RequestPinData"><code>RequestPinData</code></a>.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;IO_Pin_Data&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   The state of the micro:bit's input pins. Pins not configured for input will have 0 value.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.PinIOConfigurationReceived">PinIOConfigurationReceived(<em class="list">Pin_IO_Config_Value</em>)</dt>
+  <dd>The <code>PinIOConfigurationReceived</code> event will be run after the micro:bit’s pins’
+ input/output configuration is read. <code>Pin\_IO\_Config\_Value</code> will be a list of three
+ bytes valued from 0-255 composing a 19-bit mask indicating the input or output state of each
+ of the 19 pins provided by the micro:bit. A 0 bit indicates output and a 1 bit indicates input.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Pin\_IO\_Config\_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of 8-bit values that are composed into a 19-bit mask, one bit per pin on the micro:bit.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WrotePWMControl">WrotePWMControl(<em class="list">PWM_Control_Field</em>)</dt>
+  <dd>The <code>WrotePWMControl</code> event is run after a successful write to the micro:bit’s
+ pulse-width modulation control service. The value of the control field that was written will
+ be passed as the <code>PWM\_Control\_Field</code>.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;PWM\_Control\_Field&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   The control information written to the micro:bit.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WrotePinADConfiguration">WrotePinADConfiguration(<em class="list">Pin_AD_Config_Value</em>)</dt>
+  <dd>The <code>WrotePinADConfiguration</code> event is run after a successful write to the
+ micro:bit’s configuration server for analog and digital pins. <code>Pin\_AD\_Config\_Value</code>
+ will be the list of bytes that were written as part of the last call to the service.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Pin\_AD\_Config\_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of 8-bit values that are composed into a 19-bit mask, one bit per pin on the micro:bit.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WrotePinData">WrotePinData(<em class="list">IO_Pin_Data</em>)</dt>
+  <dd>The <code>WrotePinData</code> event will be run after the micro:bit’s output pins are
+ successfully written by a call to the <a href="#WritePinData"><code>WritePinData</code></a>
+ method.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;IO\_Pin\_Data&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash; A list of up to 19 values from 0-255 that were written to the micro:bit's
+   pins from the last call to &lt;a href="#WritePinData"&gt;&lt;code&gt;WritePinData&lt;/code&gt;&lt;/a&gt;.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WrotePinIOConfiguration">WrotePinIOConfiguration(<em class="list">Pin_IO_Config_Value</em>)</dt>
+  <dd>The <code>WrotePinIOConfiguration</code> event will run after a successful update of the
+ micro:bit’s input/output pin configuration. <code>Pin\_IO\_Config\_Value</code> that was sent to
+ the device will be passed as a parameter to the event.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Pin\_IO\_Config\_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of 8-bit values that are composed into a 19-bit mask, one bit per pin on the micro:bit.
+</code></pre></div></div>
+
+<h3 id="Microbit_Io_Pin-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Io_Pin.ReadPinADConfiguration" class="method"><i></i> ReadPinADConfiguration()</dt>
+  <dd>Read the state of the micro:bit’s pin configuration, specifically whether each pin is
+ configured as digital (0 or 1) or analog (0 to 255). After a successful read, the
+ <a href="#PinADConfigurationReceived"><code>PinADConfigurationReceived</code></a> event will
+ be run.</dd>
+  <dt id="Microbit_Io_Pin.ReadPinData" class="method"><i></i> ReadPinData()</dt>
+  <dd>Read a single sample of the pin states from the micro:bit. On successful read, the
+ <a href="#PinDataReceived"><code>PinDataReceived</code></a> event will be run. Prior to reading
+ the pins, one should configure the pins for input using the <a href="#WritePinIOConfiguration"><code>WritePinIOConfiguration</code></a> method.</dd>
+  <dt id="Microbit_Io_Pin.ReadPinIOConfiguration" class="method"><i></i> ReadPinIOConfiguration()</dt>
+  <dd>Read the current input/output configuration of the micro:bit’s pins. After a successful read,
+ the <a href="#PinIOConfigurationReceived"><code>PinIOConfigurationReceived</code></a> event
+ will be run.</dd>
+  <dt id="Microbit_Io_Pin.RequestPinDataUpdates" class="method"><i></i> RequestPinDataUpdates()</dt>
+  <dd>Request updates to any micro:bit pins configured as input pins. After requesting updates, the
+ <a href="#PinDataReceived"><code>PinDataReceived</code></a> will be run whenever the micro:bit
+ reports changes to its input pins.</dd>
+  <dt id="Microbit_Io_Pin.StopPinDataUpdates" class="method"><i></i> StopPinDataUpdates()</dt>
+  <dd>Stop receiving updates about the state of the micro:bit’s I/O pins. Note that there may be
+ pending updates that have not been processed that will result in additional
+ <a href="#PinDataReceived"><code>PinDataReceived</code></a> events.</dd>
+  <dt id="Microbit_Io_Pin.WritePWMControl" class="method"><i></i> WritePWMControl(<em class="list">PWM_Control_Field</em>)</dt>
+  <dd>Writes the PWM control field on the micro:bit. The PWM control field is a variable length
+ array of one or two instances of a data structure containing a 1-byte pin field (range 0-19),
+ a 2-byte value field (range 0-1024), and a 4-byte period field (in milliseconds).</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;PWM\_Control\_Field&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   The PWM control field data as defined in the WritePWMControl method description.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WritePinADConfiguration" class="method"><i></i> WritePinADConfiguration(<em class="list">Pin_AD_Config_Value</em>)</dt>
+  <dd>The <code>WritePinADConfiguration</code> is used to configure whether pins on the micro:bit
+ are analog or digital. The <code>Pin\_AD\_Config\_Value</code> is composed of three bytes that
+ represent 19 bits, one for each pin on the micro:bit. A 0 bit indicates a digital pin and a
+ 1 bit indicates an analog pin. The
+ <a href="#WrotePinADConfiguration"><code>WrotePinADConfiguration</code></a> event will be run
+ after successfully writing a new pin configuration.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Pin\_AD\_Config\_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of 8-bit values that are composed into a 19-bit mask, one bit per pin on the micro:bit.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WritePinData" class="method"><i></i> WritePinData(<em class="list">IO_Pin_Data</em>)</dt>
+  <dd>The <code>WritePinData</code> is used to set the output values of the micro:bit’s pins if
+ configured as output pins using the
+ <a href="#WritePinIOConfiguration"><code>WritePinIOConfiguration</code></a> method. After the
+ pins are written, the <a href="#WrotePinData"><code>WrotePinData</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;IO\_Pin\_Data&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash; A list of up to 19 values from 0-255 to be output to the micro:bit's pins.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Io_Pin.WritePinIOConfiguration" class="method"><i></i> WritePinIOConfiguration(<em class="list">Pin_IO_Config_Value</em>)</dt>
+  <dd>The <code>WritePinIOConfiguration</code> method is used to configure the micro:bit’s pins for
+ input or output. The <code>Pin\_IO\_Config\_Value</code> parameter should be a 3-element list
+ where each element is a number from 0-255 composing a 19-bit bitmask. A 0-bit indicates an
+ output and a 1-bit indicates an input.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Pin_IO_Config_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#emptylist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of 8-bit values that are composed into a 19-bit mask, one bit per pin on the micro:bit.
+</code></pre></div></div>
+
+<h2 id="Microbit_Led">Microbit_Led</h2>
+
+<p>Component for Microbit_Led</p>
+
+<h3 id="Microbit_Led-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Led.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Led-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Led.LEDMatrixStateReceived">LEDMatrixStateReceived(<em class="list">LED_Matrix_State</em>)</dt>
+  <dd>The <code>LEDMatrixStateReceived</code> event is run when the state of the micro:bit’s LED
+ matrix is read from the device. The <code>LED_Matrix_State</code> is a list of 5 values, one
+ for each row of the matrix. Each value is an number from 0-31. From left to right, the LEDs
+ are valued 16, 8, 4, 2, 1.<br />\n\n</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;LED_Matrix_State&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash; A list of 5 values, one for each row, with
+  each value being between 0-31 to indicate which LEDs in that row are on.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Led.ScrollingDelayReceived">ScrollingDelayReceived(<em class="number">Scrolling_Delay_Value</em>)</dt>
+  <dd>The <code>Scrolling_Delay_Value</code> event will be run after requesting the scrolling delay
+ for the micro:bit’s LED matrix through the
+ &lt;a href=”#ReadScrollingDelay&gt;<code>ReadScrollingDelay</code>&lt;/a&gt; method.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Scrolling_Delay_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The delay between characters on the LED matrix, in milliseconds.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Led.WroteLEDMatrixState">WroteLEDMatrixState(<em class="list">LED_Matrix_State</em>)</dt>
+  <dd>The <code>WriteLEDMatrixState</code> event will be run after the micro:bit’s LED matrix is
+ written due to a call to <a href="#WriteLEDMatrixState"><code>WriteLEDMatrixState</code></a>.
+ The LED_Matrix_State will be the same as in the call to <code>WriteLEDMatrixState</code> to
+ differentiate the response to potentially many calls to write the LED matrix.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;LED_Matrix_State&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash; The values written to the LED matrix as specified in the previous call
+   to [`WriteLEDMatrixState`](#Microbit_Led.WriteLEDMatrixState) that resulted in this event.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Led.WroteLEDText">WroteLEDText(<em class="list">LED_Text_Value</em>)</dt>
+  <dd>The <code>WroteLEDText</code> event will be run after text is written to the micro:bit’s LED
+ matrix through a call to <a href="#WriteLEDText"><code>WriteLEDText</code></a>. The value of
+ the written text will be given by the <code>LED_Text_Value</code> parameter.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;LED_Text_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/text.html#string"&gt;_text_&lt;/a&gt;) &amp;mdash; The text to write to the LED matrix.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Led.WroteScrollingDelay">WroteScrollingDelay(<em class="number">Scrolling_Delay_Value</em>)</dt>
+  <dd>The <code>WroteScrollingDelay</code> event will be run after the micro:bit’s scrolling delay
+ is successfully read after a call to the
+ <a href="#WriteScrollingDelay"><code>WriteScrollingDelay</code></a> method.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Scrolling_Delay_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The delay between characters on the LED matrix, in milliseconds.
+</code></pre></div></div>
+
+<h3 id="Microbit_Led-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Led.ReadLEDMatrixState" class="method"><i></i> ReadLEDMatrixState()</dt>
+  <dd>Read the current state of the LED matrix from the micro:bit. The LED matrix state will be
+ reported through the <a href="#LEDMatrixStateReceived"><code>LEDMatrixStateReceived</code></a>
+ event.</dd>
+  <dt id="Microbit_Led.ReadScrollingDelay" class="method"><i></i> ReadScrollingDelay()</dt>
+  <dd>Read the current scroll delay for the micro:bit’s LED matrix. After a successful read, the
+ <a href="#ScrollingDelayReceived"><code>ScrollingDelayReceived</code></a> event will be run.</dd>
+  <dt id="Microbit_Led.WriteLEDMatrixState" class="method"><i></i> WriteLEDMatrixState(<em class="list">LED_Matrix_State</em>)</dt>
+  <dd>Write the state of the micro:bit’s LED matrix. <code>LED_Matrix_State</code> should be a list
+ of 5 numbers from 0-31 to indicate which LEDs should be turned on in each of the 5 rows of the
+ LED matrix. From left to right, the values of the LEDs are 16, 8, 4, 2, 1. For example, if you
+ want to turn on the LEDs in one row such that power states were 10011, you would send the value
+ (16 + 2 + 1) or 19 for the row. After the write operation completes, the
+ <a href="#WroteLEDMatrixState"><code>WroteLEDMatrixState</code></a> event will be run.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;LED_Matrix_State&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/lists.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash; A list of 5 numbers, one for each row of the LED matrix, where each
+   value is the integer value of the bit array for the nth row of the LED matrix.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Led.WriteLEDText" class="method"><i></i> WriteLEDText(<em class="text">LED_Text_Value</em>)</dt>
+  <dd>Write text to the micro:bit’s LED matrix. The rate at which each character appears on the
+ micro:bit’s display depends on the last scroll value written by
+ <a href="#WriteScrollDelay"><code>WriteScrollDelay</code></a>. Due to the allowable length of
+ Bluetooth low energy packets, the strings sent are restricted to 20 or more UTF-8 octets.
+ Attempts to write strings longer than 20 octets will result in truncated messages.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;LED_Text_Value&lt;/code&gt; (_string_) &amp;mdash; The text to write. Strings are limited to
+  a length of 20 UTF-8 octets.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Led.WriteScrollingDelay" class="method"><i></i> WriteScrollingDelay(<em class="number">Scrolling_Delay_Value</em>)</dt>
+  <dd>Set the delay between characters displayed on the micro:bit’s LED matrix, in milliseconds.
+ After writing the value, the
+ <a href="#WroteScrollingDelay"><code>WriteScrollingDelay</code></a> will be called.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Scrolling_Delay_Value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The delay between characters on the LED matrix, in milliseconds.
+</code></pre></div></div>
+
+<h2 id="Microbit_Magnetometer">Microbit_Magnetometer</h2>
+
+<p>Component for Microbit_Magnetometer</p>
+
+<h3 id="Microbit_Magnetometer-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Magnetometer.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Magnetometer-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Magnetometer.MagnetometerBearingReceived">MagnetometerBearingReceived(<em class="number">bearing_value</em>)</dt>
+  <dd>The <code>MagnetometerBearingReceived</code> event is run whenever bearing samples are
+ received from the micro:bit. This is usually a result of performing a
+ <a href="#ReadMagnetometerBearing">read</a> or
+ <a href="#RequestMagnetometerBearingUpdates">request</a> operation. The bearing value is
+ reported as degrees relative to North.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;bearing_value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The bearing from North, in degrees.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Magnetometer.MagnetometerDataReceived">MagnetometerDataReceived(<em class="number">Magnetometer_X</em>,<em class="number">Magnetometer_Y</em>,<em class="number">Magnetometer_Z</em>)</dt>
+  <dd>The <code>MagnetometerDataReceived</code> event is run whenever magnetometer samples are
+ received from the micro:bit. This is usually a result of performing a
+ <a href="#ReadMagnetometerData">read</a> or
+ <a href="#RequestMagnetometerDataUpdates">request</a> operation. The X, Y, and Z values are in
+ milli-teslas, and so should be scaled by 1/1000.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ &lt;code&gt;Magnetometer_X&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The X value of the magnetometer, in milliT.
++ &lt;code&gt;Magnetometer_Y&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The Y value of the magnetometer, in milliT.
++ &lt;code&gt;Magnetometer_Z&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash; The Z value of the magnetometer, in milliT.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Magnetometer.MagnetometerPeriodReceived">MagnetometerPeriodReceived(<em class="number">Magnetometer_Period</em>)</dt>
+  <dd>The <code>MagnetometerPeriodReceived</code> event is run after the micro:bit’s magnetometer
+ period is read from the device.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Magnetometer_Period&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The current reporting interval for the micro:bit's magnetometer, in milliseconds.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Magnetometer.WroteMagnetometerPeriod">WroteMagnetometerPeriod(<em class="number">Magnetometer_Period</em>)</dt>
+  <dd>The <code>WroteMagnetometerPeriod</code> event is run after the micro:bit reports its period
+ as requested by an earlier call to the
+ <a href="#ReadMagnetometerPeriod"><code>ReadAccelerometerPeriod</code></a> method.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Magnetometer_Period&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The reporting periodf or the micro:bit's magnetometer, in milliseconds.
+</code></pre></div></div>
+
+<h3 id="Microbit_Magnetometer-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Magnetometer.ReadMagnetometerBearing" class="method"><i></i> ReadMagnetometerBearing()</dt>
+  <dd>Read a single bearing sample from the micro:bit. On successful read, the
+ <a href="#MagnetometerBearingReceived"><code>MagnetometerBearingReceived</code></a> event
+ will be run.</dd>
+  <dt id="Microbit_Magnetometer.ReadMagnetometerData" class="method"><i></i> ReadMagnetometerData()</dt>
+  <dd>Read a single sample of magnetometer data from the micro:bit. On successful read, the
+ <a href="#MagnetometerDataReceived"><code>MagnetometerDataReceived</code></a> event will be
+ run.</dd>
+  <dt id="Microbit_Magnetometer.ReadMagnetometerPeriod" class="method"><i></i> ReadMagnetometerPeriod()</dt>
+  <dd>Read the current report rate for the micro:bit magnetometer. After the period is read, it will
+ be received by the
+ <a href="#MagnetometerPeriodReceived"><code>MagnetometerPeriodReceived</code></a> event.</dd>
+  <dt id="Microbit_Magnetometer.RequestMagnetometerBearingUpdates" class="method"><i></i> RequestMagnetometerBearingUpdates()</dt>
+  <dd>Request notifications of changes in the micro:bit’s bearing. Changes in the bearing will be
+ reported at a rate determined by the last period value set by a call to
+ <a href="#WriteMagnetometerPeriod"><code>WriteMagnetometerPeriod</code></a>. Bearing data
+ will be reported through the
+ <a href="#MagnetometerBearingReceived"><code>MagnetometerBearingReceived</code></a> event.</dd>
+  <dt id="Microbit_Magnetometer.RequestMagnetometerDataUpdates" class="method"><i></i> RequestMagnetometerDataUpdates()</dt>
+  <dd>Request notifications of changes in the micro:bit’s magnetometer. Changes in the magnetometer
+ will be reported at a rate determined by the last period value set by a call to
+ <a href="#WriteMagnetometerPeriod"><code>WriteMagnetometerPeriod</code></a>. Magnetometer
+ data will be reported through the
+ <a href="#MagnetometerDataReceived"><code>MagnetometerDataReceived</code></a> event.</dd>
+  <dt id="Microbit_Magnetometer.StopMagnetometerBearingUpdates" class="method"><i></i> StopMagnetometerBearingUpdates()</dt>
+  <dd>Stop receiving updates from the micro:bit’s magnetometer. Note that there may be pending
+ messages from the device that will still be reported through the
+ <a href="#MagnetometerBearingReceived"><code>MagnetometerBearingReceived</code></a> event.</dd>
+  <dt id="Microbit_Magnetometer.StopMagnetometerDataUpdates" class="method"><i></i> StopMagnetometerDataUpdates()</dt>
+  <dd>Stop receiving updates from the micro:bit’s magnetometer. Note that there may be pending
+ messages from the device that will still be reported through the
+ <a href="#MagnetometerDataReceived"><code>MagnetometerDataReceived</code></a> event.</dd>
+  <dt id="Microbit_Magnetometer.WriteMagnetometerPeriod" class="method"><i></i> WriteMagnetometerPeriod(<em class="number">Magnetometer_Period</em>)</dt>
+  <dd>Use the <code>WriteMagnetometerPeriod</code> method to change how frequently the micro:bit
+ sends magnetometer data to App Inventor. The period is measured in milliseconds. According to
+ the micro:bit specification, valid values are 1, 2, 5, 10, 20, 80, 160 and 640 milliseconds.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;Magnetometer_Period&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The new magnetometer reporting period, in milliseconds.
+</code></pre></div></div>
+
+<h2 id="Microbit_Temperature">Microbit_Temperature</h2>
+
+<p>Component for Microbit_Temperature</p>
+
+<h3 id="Microbit_Temperature-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Temperature.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Temperature-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Temperature.TemperaturePeriodReceived">TemperaturePeriodReceived(<em class="number">temperature_period_value</em>)</dt>
+  <dd>The <code>TemperaturePeriodReceived</code> event is run after the micro:bit’s temperature
+ reporting period is read from the device.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;temperature_period_value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The current reporting interval for the micro:bit's temperature sensor.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Temperature.TemperatureReceived">TemperatureReceived(<em class="number">temperature_value</em>)</dt>
+  <dd>The <code>TemperatureReceived</code> event is run whenever temperature samples are received
+ from the micro:bit. This is usually a result of performing a
+ <a href="#ReadTemperature">read</a> or <a href="#RequestTemperatureUpdates">request updates</a>
+ operation. The temperature value is measured in degrees Celsius.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;temperature_value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The temperature measured by the micro:bit, in degrees Celsius
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Temperature.WroteTemperaturePeriod">WroteTemperaturePeriod(<em class="number">temperature_period_value</em>)</dt>
+  <dd>The <code>WroteTemperaturePeriod</code> event is run after the micro:bit’s temperature
+ reporting period is written to the device.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;temperature_period_value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The new reporting interval for the micro:bit's temperature sensor.
+</code></pre></div></div>
+
+<h3 id="Microbit_Temperature-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Temperature.ReadTemperature" class="method"><i></i> ReadTemperature()</dt>
+  <dd>Read a single sample of temperature data from the micro:bit. On successful read, the
+ <a href="#TemperatureDataReceived"><code>TemperatureDataReceived</code></a> event will be run.</dd>
+  <dt id="Microbit_Temperature.ReadTemperaturePeriod" class="method"><i></i> ReadTemperaturePeriod()</dt>
+  <dd>Read the current report rate for the micro:bit’s temperature sensor. After the period is read,
+ it will be received by the
+ <a href="#TemperaturePeriodReceived"><code>TemperaturePeriodReceived</code></a> event.</dd>
+  <dt id="Microbit_Temperature.RequestTemperatureUpdates" class="method"><i></i> RequestTemperatureUpdates()</dt>
+  <dd>Request notifications of changes in the micro:bit’s temperature sensor. Changes in the
+ temperature will be reported at a rate determined by the last period value set by a call to
+ <a href="#WriteTemperaturePeriod"><code>WriteTemperaturePeriod</code></a>. Temperature data
+ will be reported through the
+ <a href="#TemperatureDataReceived"><code>TemperatureDataReceived</code></a> event.</dd>
+  <dt id="Microbit_Temperature.StopTemperatureUpdates" class="method"><i></i> StopTemperatureUpdates()</dt>
+  <dd>Stop receiving updates from the micro:bit’s temperature sensor. Note that there may be
+ pending messages from the device that will still be reported through the
+ <a href="#TemperatureDataReceived"><code>TemperatureDataReceived</code></a> event.</dd>
+  <dt id="Microbit_Temperature.WriteTemperaturePeriod" class="method"><i></i> WriteTemperaturePeriod(<em class="number">temperature_period_value</em>)</dt>
+  <dd>Use the <code>WriteTemperaturePeriod</code> method to change how frequently the micro:bit sends
+ temperature data to App Inventor. The period is measured in milliseconds.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;temperature_period_value&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/math.html#number"&gt;_number_&lt;/a&gt;) &amp;mdash;
+   The new reporting period for the micro:bit's temperature sensor.
+</code></pre></div></div>
+
+<h2 id="Microbit_Uart">Microbit_Uart</h2>
+
+<p>Component for Microbit_Uart</p>
+
+<h3 id="Microbit_Uart-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="Microbit_Uart.BluetoothDevice" class="component"><em>BluetoothDevice</em></dt>
+  <dd>The BluetoothLE component connected to the micro:bit device (getter).</dd>
+</dl>
+
+<h3 id="Microbit_Uart-Events">Events</h3>
+
+<dl class="events">
+  <dt id="Microbit_Uart.TXCharacteristicReceived">TXCharacteristicReceived(<em class="list">UART_TX_Field</em>)</dt>
+  <dd>The <code>TXCharacteristicReceived</code> event is run whenever messages are received over the
+ micro:bit’s serial UART protocol.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;UART_TX_FIELD&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/listsU.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of unsigned byte values read from the device.
+</code></pre></div></div>
+
+<dl>
+  <dt id="Microbit_Uart.WroteRXCharacteristic">WroteRXCharacteristic(<em class="list">UART_TX_Field</em>)</dt>
+  <dd>The <code>WroteRXCharacteristic</code> event is run after a message is written to the micro:bit
+ via its serial UART.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;UART_TX_FIELD&lt;/code&gt; (&lt;a href="http://appinventor.mit.edu/explore/ai2/support/blocks/listsU.html#makealist"&gt;_list_&lt;/a&gt;) &amp;mdash;
+   A list of unsigned byte values written to the device.
+</code></pre></div></div>
+
+<h3 id="Microbit_Uart-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="Microbit_Uart.RequestTXCharacteristic" class="method"><i></i> RequestTXCharacteristic()</dt>
+  <dd>Requests notifications of messages received from the micro:bit’s serial UART. New messages will
+ be received through the
+ <a href="#TXCharacteristicReceived"><code>TXCharacteristicReceived</code></a>
+ event.</dd>
+  <dt id="Microbit_Uart.StopTXCharacteristicUpdates" class="method"><i></i> StopTXCharacteristicUpdates()</dt>
+  <dd>Stops receiving updates from the micro:bit’s serial UART. Note that there may be pending
+ messages from the device that will still be reported through the
+ <a href="#TXCharacteristicReceived"><code>TXCharacteristicReceived</code></a> event.</dd>
+  <dt id="Microbit_Uart.WriteRXCharacteristic" class="method"><i></i> WriteRXCharacteristic(<em class="any">UART_TX</em>)</dt>
+  <dd>Writes the given value <code>UART_TX</code> to the micro:bit. The size of the message will
+ depend on the value of <code>UART_TX</code>. Numbers will be converted to integers and sent
+ as 32-bit integer values. Strings will be encoded using UTF-8. Lists of objects will be
+ sent as a sequence of bytes using the aforementioned rules for numbers and strings.</dd>
+</dl>
+
+<p><strong>Parameters</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * &lt;code&gt;UART_TX&lt;/code&gt; (_any_) &amp;mdash;
+   The value to transmit to the RX "pin" of the micro:bit. Strings will be encoded as UTF-8,
+   numbers will be sent as 32-bit integers. Lists of values will be converted into be
+   converted into a sequence of bytes depending on the type of each value in the list.
+</code></pre></div></div>
+
+<h2 id="TextRecognizerGood">TextRecognizerGood</h2>
+
+<p>Component for TextRecognizerGood</p>
+
+<h3 id="TextRecognizerGood-Properties">Properties</h3>
+
+<dl class="properties">
+  <dt id="TextRecognizerGood.List" class="text ro bo"><em>List</em></dt>
+  <dd>Input an image and outputs the text on the image</dd>
+</dl>
+
+<h3 id="TextRecognizerGood-Events">Events</h3>
+
+<dl class="events">
+  <dt id="TextRecognizerGood.ErrorOccured">ErrorOccured(<em class="text">error</em>)</dt>
+  <dd>Event for ErrorOccured</dd>
+  <dt id="TextRecognizerGood.Result">Result(<em class="text">result</em>)</dt>
+  <dd>Event for Result</dd>
+</dl>
+
+<h3 id="TextRecognizerGood-Methods">Methods</h3>
+
+<dl class="methods">
+  <dt id="TextRecognizerGood.newFunction" class="method"><i></i> newFunction(<em class="text">path</em>)</dt>
+  <dd>Method for newFunction</dd>
+  <dt id="TextRecognizerGood.setRecognizer" class="method"><i></i> setRecognizer(<em class="text">path</em>)</dt>
+  <dd>Method for setRecognizer</dd>
+</dl>
+
+</article>
+<script>
+  // Handle redirection to documentation based on locale query parameter (if specified)
+  (function() {
+      var locale = window.location.search.match('[&?]locale=([a-zA-Z-]*)');
+      if (locale) {
+          if (locale[1].indexOf('en') === 0) {
+              // English needs to stay at the top level to not break existing links
+              var page = window.location.pathname.split('/');
+              if (page.length === 5) {
+                  page.splice(2, 1);
+              } else {
+                  // already on english
+                  return;
+              }
+              window.location.href = page.join('/');
+          } else {
+              var page = window.location.pathname.split('/');
+              if (page.length === 4) {
+                  page.splice(2, 0, locale[1]);
+              } else if (page[2].toLowerCase() != locale[1].toLowerCase()) {
+                  page[2] = locale[1];
+              } else {
+                  return;  // already on the desired language
+              }
+              // Test that the page exists before redirecting.
+              var xhr = new XMLHttpRequest();
+              xhr.open('HEAD', page.join('/'), false);
+              xhr.onreadystatechange = function() {
+                  if (xhr.readyState == 4) {
+                      if ((xhr.status == 200 || xhr.status == 204)) {
+                          window.location.href = page.join('/');
+                      } else if (xhr.status  >= 400) {
+                          page.splice(2, 1);  // go to english version
+                          window.location.href = page.join('/');
+                      }
+                  }
+              };
+              xhr.send();
+          }
+      }
+  })();
+
+  // Handle embedded documentation in help by removing website template
+  if (window.self !== window.top) {
+      setTimeout(function() {
+          var videos = document.querySelectorAll('video');
+          for (var i = 0; i < videos.length; i++) {
+              if (parseInt(videos[i].getAttribute('width')) > 360) {
+                  var aspect = parseInt(videos[i].getAttribute('height')) / parseInt(videos[i].getAttribute('width'));
+                  videos[i].setAttribute('width', '360');
+                  videos[i].setAttribute('height', '' + (360 * aspect));
+              }
+          }
+          var h1 = document.querySelector('h1');
+          var article = document.querySelector('article');
+          article.insertBefore(h1, article.firstElementChild);
+          document.body.innerHTML = article.outerHTML;
+      });
+  }
+</script>
+
+            </div>
+            <div class="footer background-green">
+    <div class="row container">
+	<div class="col-xl-3">
+	    <h3>MIT App Inventor</h3>
+	    <!-- <form class="form-inline" action="/action_page.php">
+		 <div class="form-group has-search">
+		 <span class="fa fa-search form-control-feedback"></span>
+		 <input type="text" class="form-control" placeholder="Search">
+		 </div>
+		 </form> -->
+	</div>
+	<div class="col-xl-6 legal text-center">
+	    <ul>
+		<li>
+		    <a href="http://web.mit.edu" class="btn btn-link" role="button"
+                       target="_blank">© 2012-2020 Massachusetts Institute of Technology</a>
+		</li>
+		<li>
+		    <a href="http://creativecommons.org/licenses/by-sa/3.0/"
+                       target="_blank" class="btn btn-link" role="button">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0</a>
+		</li>
+		<li>
+		    <a href="http://appinventor.mit.edu/about/termsofservice"
+                       target="_blank" class="btn btn-link" role="button">Terms of Service and Privacy Policy</a>
+		</li>
+	    </ul>
+	</div>
+	<div class="col-xl-3 links">
+            <a href="https://community.appinventor.mit.edu" target="_blank">Support / Help</a><br>
+            <a href="mailto:appinventor@mit.edu">Other Inquiries</a>
+	    <div>
+		<span>Twitter:</span>
+		<a href="https://twitter.com/mitappinventor"
+                   target="_blank" class="btn btn-link" role="button">@MITAppInventor</a>
+		<div>
+		    <div>
+			<span>GitHub:</span>
+			<a href="https://github.com/mit-cml" class="btn btn-link" role="button"
+                           target="_blank">mit-cml</a>
+			<div>
+			</div>
+	            </div>
+	        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="/static/js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="/static/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script async src="/static/js/widgets.js" charset="utf-8"></script>
+</div>
+    </body>
+</html>

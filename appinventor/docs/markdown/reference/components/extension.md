@@ -22,7 +22,7 @@ Table of Contents:
 * [Microbit_Magnetometer](#Microbit_Magnetometer)
 * [Microbit_Temperature](#Microbit_Temperature)
 * [Microbit_Uart](#Microbit_Uart)
-* [TextRecognizer1](#TextRecognizer1)
+* [TextRecognizerGood](#TextRecognizerGood)
 
 ## BluetoothLE  {#BluetoothLE}
 
@@ -2017,26 +2017,35 @@ Component for Microbit_Uart
        numbers will be sent as 32-bit integers. Lists of values will be converted into be
        converted into a sequence of bytes depending on the type of each value in the list.
 
-## TextRecognizer1  {#TextRecognizer1}
+## TextRecognizerGood  {#TextRecognizerGood}
 
-Component for TextRecognizer1
+Component for TextRecognizerGood
 
 
 
-### Properties  {#TextRecognizer1-Properties}
+### Properties  {#TextRecognizerGood-Properties}
 
 {:.properties}
-None
 
+{:id="TextRecognizerGood.List" .text .ro .bo} *List*
+: Input an image and outputs the text on the image
 
-### Events  {#TextRecognizer1-Events}
+### Events  {#TextRecognizerGood-Events}
 
 {:.events}
-None
 
+{:id="TextRecognizerGood.ErrorOccured"} ErrorOccured(*error*{:.text})
+: Event for ErrorOccured
 
-### Methods  {#TextRecognizer1-Methods}
+{:id="TextRecognizerGood.Result"} Result(*result*{:.text})
+: Event for Result
+
+### Methods  {#TextRecognizerGood-Methods}
 
 {:.methods}
-None
 
+{:id="TextRecognizerGood.newFunction" class="method"} <i/> newFunction(*path*{:.text})
+: Method for newFunction
+
+{:id="TextRecognizerGood.setRecognizer" class="method"} <i/> setRecognizer(*path*{:.text})
+: Method for setRecognizer
